@@ -1,0 +1,71 @@
+seed: 42
+data_as_of: "2026-10-26"
+
+paths:
+  raw: data/raw
+  processed: data/processed
+  tables: outputs/tables
+  figures: outputs/figures
+  briefs: outputs/briefs
+
+ads:
+  min_spend_inr: 10000
+  min_spend_variants: [5000, 10000, 20000]
+  outlier_ads: ["LJ-004"]
+  suspected_tracking_fault: ["LJ-089"]     # excluded from performance conclusions
+  zero_purchase_spend_flag_inr: 100000     # flag ads above this spend with zero purchases
+  min_group_size: 8
+  bootstrap_iterations: 5000
+  ci_level: 0.95
+  features_to_test:                        # PRE-REGISTERED before looking at results
+    - language
+    - hook_type
+    - hook_driver
+    - ad_format
+    - child_on_screen
+    - child_in_first_3s
+    - brand_first_said
+    - main_benefit
+    - production
+    - product_form
+  consistency_metric_pairs:                # a finding needs same direction on >= 2 of these
+    - [roas, cvr]
+    - [hook_rate, hold_rate]
+
+creators:
+  min_posts_for_confidence: 12
+  min_posts_per_group_for_ratio: 3         # organic and sponsored each
+  hidden_likes_threshold: 5                # likes <= this counted as hidden
+  hidden_likes_share_flag: 0.25
+  sponsored_share_flag: 0.70
+  inactive_days_flag: 45
+  reach_cap_percentile: 0.95
+
+gates:
+  already_partner_brand: "Little Joys"
+  min_women_share_known: 0.50              # only applied where audience is known
+  min_india_share_known: 0.80
+  min_child_family_share: 0.15             # share of posts with kids on camera or family/food topics
+  min_posts: 8
+
+brand_categories:                          # explicit; unknown brands are listed, not guessed
+  competitor_kids_nutrition: ["Gritzo"]    # extend after inspecting brands_visible
+  adjacent_food_snacks: ["Cadbury", "Chupa Chups"]
+  adjacent_wellness: ["Himalaya"]
+  # add others after Phase 1 audit lists every brand seen
+
+scoring:
+  weights:
+    creative_fit: 0.30
+    reach_quality: 0.25
+    engagement_quality: 0.20
+    audience_fit: 0.15
+    commercial_risk: 0.10
+  unknown_audience_score: 0.50             # neutral; confidence is lowered separately
+  top_n: 5
+
+sensitivity:
+  draws: 2000
+  dirichlet_concentration: 50
+  robust_threshold: 0.80
+  likely_threshold: 0.50
