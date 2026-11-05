@@ -601,25 +601,6 @@ Visuals: ad findings forest plot with intervals; funnel by pattern; reach vs fol
 
 ---
 
-## 16. Phases and timeline
-
-| Phase | Output | Hours | Day |
-|---|---|---|---|
-| 0 | Environment, repo, AGENTS.md | 0.75 | 1 |
-| 1 | Audit, data audit doc, label sample | 1.5 | 1 |
-| 2 | Ad findings with intervals | 2.0 | 1 |
-| 3 | Creator features and profiles | 1.5 | 1 |
-| 4 | Gates, scoring, ranking | 1.5 | 2 |
-| 5 | Sensitivity and robustness | 1.0 | 2 |
-| 6 | Claims whitelist and briefs | 1.5 | 2 |
-| 7 | Report | 1.5 | 2 |
-| 8 | run_all, README, clean-clone test | 1.0 | 2 |
-| 9 | Note, AI logs, recording, submission | 1.5 | 2 |
-
-Total about 14 hours at the generous end. If time runs short, protect in this order: audit, ad findings, gates and ranking, briefs for the top 5, report, README, note. Cut first: figures beyond the first three, notebook, recording polish, stretch items.
-
----
-
 ## 17. Risks and mitigations
 
 | Risk | Likelihood | Impact | Mitigation |

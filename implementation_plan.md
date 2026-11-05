@@ -2,7 +2,7 @@
 
 **Question to answer:** Which 5 of the 20 creators should Little Joys work with next, and what should each of them say, using only the brand's own data?
 
-**Budget:** 2 days, about 10 to 12 hours of real work.
+
 **Guiding rule:** a plain answer with sound reasoning beats a polished one nobody can trust. Every number in the final answer must trace to a script, and every limitation must be stated.
 
 **Companion document:** `PRD.md` holds the full specification (folder structure, config, module specs, scoring formulas, output schemas, acceptance criteria). This plan tells you **what to do, in what order, with which commands and prompts**.
@@ -17,12 +17,7 @@
 4. One phase per conversation or task. Do not let the agent skip ahead.
 5. All commands run from the **repo root** (`little-joys-creators/`) unless a path is shown.
 
-### Time plan
 
-| Block | Phases | Approx. hours |
-|---|---|---|
-| Day 1 | 0, 1, 2, 3 | 5 to 6 |
-| Day 2 | 4, 5, 6, 7, 8, 9 | 6 to 7 |
 
 If time runs short, protect in this order: audit, ad findings, gates and ranking, briefs for the top 5, report, README, note. Cut first: extra figures, notebook, recording polish, stretch items.
 

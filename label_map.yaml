@@ -1,0 +1,133 @@
+# ==============================================================================
+# Little Joys: Ad-to-Post Label Mapping (label_map.yaml)
+# Phase 3 Proposal for Phase 4 Fit Scoring
+# ==============================================================================
+# Maps surviving empirical findings from docs/ad_findings.md (Phase 2)
+# to corresponding creator post attributes in data/raw/creator_posts.csv.
+#
+# RULE: Any ad label with no reliable mapping is marked unmapped and excluded
+# from the creator fit component, never guessed.
+# ==============================================================================
+
+# Finding F01 (Supported): language == Hindi (Attention: +10.49% Hook Rate lift)
+language_mapping:
+  ad_finding: "Hindi"
+  post_field: "language"
+  mapped_post_values:
+    - "Hindi"
+  # UNSURE / REVIEW NEEDED:
+  # In creator_posts, several bilingual combinations exist:
+  # - "Hindi and English" (32 posts)
+  # - "English and Hindi" (11 posts)
+  # - "Hindi/English" (3 posts)
+  # - "Hindi/English (Hinglish)" (1 post)
+  # In ads, pure Hindi had strong hook lift (+10.49%), while Hinglish was an LJ-004 outlier artifact.
+  # We propose matching only pure "Hindi" by default. If bilingual posts should count, user must confirm.
+  include_bilingual_hindi: false
+
+# Finding F05 (Supported): child_in_first_3s == yes (Attention: +8.09% Hook Rate lift)
+child_in_first_3s_mapping:
+  ad_finding: "yes"
+  post_field: "children_on_camera"
+  mapped_post_values:
+    - "yes"
+  # UNSURE / REVIEW NEEDED:
+  # creator_posts.csv records 'children_on_camera' (yes/no), but does NOT record a timestamp
+  # for whether the child appears in the first 3 seconds specifically.
+  # We map 'yes' to 'children_on_camera: yes' as a proxy, but flag that timing is unverified.
+  is_proxy_timing_unknown: true
+
+# Finding F04 (Directional): child_on_screen == multiple (Attention: +4.40% Hook Rate lift)
+child_on_screen_multiple_mapping:
+  ad_finding: "multiple"
+  post_field: "child_ages"
+  # UNSURE / REVIEW NEEDED:
+  # creator_posts.csv only has binary 'children_on_camera' (yes/no) and does not have a child count field.
+  # However, 'child_ages' contains semicolon-separated age groups (e.g. '0-2; 0-2').
+  # If len(child_ages.split(';')) > 1, multiple children are inferred.
+  # Is this inference acceptable, or should F04 be excluded from fit scoring due to lack of direct column?
+  status: "unmapped_or_inferred_from_child_ages"
+  use_child_ages_count_inference: false
+
+# Finding F02 (Directional): hook_type == problem_statement (Attention: +3.60% Hook Rate lift)
+hook_type_problem_statement_mapping:
+  ad_finding: "problem_statement"
+  post_field: "hook_style"
+  # UNSURE / REVIEW NEEDED:
+  # In creator_posts.csv, 'hook_style' is an open-ended descriptive string (370 distinct values across 392 posts),
+  # not a standardized categorical enum.
+  # Proposed keyword patterns to identify problem statement hooks:
+  match_keywords:
+    - "problem"
+    - "challenge"
+    - "struggle"
+    - "mistake"
+    - "myth"
+    - "concern"
+    - "worry"
+    - "tired"
+    - "tantrum"
+    - "issue"
+  # Flag: Keyword matching is heuristic and may miss paraphrases or produce false positives.
+  is_heuristic_keyword_match: true
+
+# Finding F03 (Directional): hook_driver == fear_pain_point (Attention: +2.18% Hook Rate lift)
+hook_driver_fear_pain_point_mapping:
+  ad_finding: "fear_pain_point"
+  post_field: "tone"
+  # UNSURE / REVIEW NEEDED:
+  # creator_posts.csv has no 'hook_driver' column. The closest post field is 'tone'.
+  # In creator_posts, tone values include: 'alarmist', 'urgent', 'serious', 'informative', 'reassuring'.
+  # Note: in ad_pattern_overlap.csv, fear_pain_point and problem_statement share 47.4% Jaccard overlap.
+  # Proposed mapping:
+  match_tone_keywords:
+    - "alarmist"
+    - "urgent"
+    - "warning"
+    - "concern"
+  # Flag: Very few posts carry an explicitly alarmist/urgent tone. We recommend excluding F03 or merging with F02.
+  status: "tentative_mapping_review_needed"
+
+# Finding F07 (Directional): main_benefit == fussy_eating (Attention: +5.12% Hook Rate lift)
+main_benefit_fussy_eating_mapping:
+  ad_finding: "fussy_eating"
+  post_field: "topic"
+  # UNSURE / REVIEW NEEDED:
+  # 'topic' in creator_posts is free-text. We propose matching food/eating topics with fussy/picky indicators:
+  match_keywords:
+    - "fussy"
+    - "picky"
+    - "refusing food"
+    - "mealtime tantrum"
+    - "eating habit"
+    - "weight gain"
+    - "not eating"
+  is_heuristic_keyword_match: true
+
+# Finding F08 (Directional): production == ugc (Attention: +1.37% Hook Rate lift)
+production_ugc_mapping:
+  ad_finding: "ugc"
+  post_fields:
+    - "production_quality_1to5"
+    - "content_form"
+  # UNSURE / REVIEW NEEDED:
+  # In ads, production is categorical ('ugc', 'semi_pro', 'polished_studio').
+  # In posts, quality is an integer 1 to 5, and content_form is a format category.
+  # Proposed mapping: production_quality_1to5 <= 3 AND content_form in ['piece_to_camera', 'demo_or_haul', 'still_or_carousel'].
+  # Higher quality (4 or 5) or polished formats (skit, studio interview) excluded from UGC.
+  max_production_quality: 3
+  mapped_content_forms:
+    - "piece_to_camera"
+    - "demo_or_haul"
+    - "still_or_carousel"
+  is_proxy_mapping: true
+
+# Finding F06 (Directional): brand_first_said == 5_to_10s (Conversion: +0.15 ROAS lift)
+brand_first_said_mapping:
+  ad_finding: "5_to_10s"
+  # UNMAPPED:
+  # creator_posts.csv records 'product_shown' (yes/no) and 'brands_visible', but has NO timestamp
+  # for when the brand or product is first spoken or shown in the reel.
+  status: "unmapped_excluded_from_fit"
+  reason: "post_schema_does_not_record_brand_mention_timestamp"
+

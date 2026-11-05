@@ -195,3 +195,39 @@ Run pytest, show real output, and stop.
 - Verified that all 10 traits of LJ-004 keep under 50% on ROAS lift without LJ-004.
 - Verified that 8 patterns survive (2 Supported: Hindi attention, Child in first 3s attention; 6 Directional).
 - Confirmed all 25 tests pass in `pytest -q`.
+
+---
+
+## Phase 3: Creator Features, Label Mapping, and Creator Profiles
+**Date/time:** 2026-11-05
+**Mode / model:** Antigravity / Gemini 3.8 Flash (High)
+**Prompt:**
+```text
+Read docs/data_audit.md and docs/ad_findings.md. Do only Phase 3.
+
+src/lj/creator_features.py writes data/processed/creator_features.csv, one row per creator, with the columns in PRD.md section 8.2 (creator_features). Use medians. Handle hidden likes and withhold organic/sponsored ratios when a group has fewer than 3 posts. Map brands_visible to categories using brand_categories in config.yaml, and list every brand not in the dictionary instead of guessing. Every NaN needs a reason column.
+Propose a label_map.yaml from the distinct label values in the Phase 1 audit tables, for each surviving finding in docs/ad_findings.md. Mark every mapping you are unsure about with a comment. I will review it.
+Write docs/creator_profiles.md with a 3 to 4 line profile per creator quoting persona, what_feels_native and the numbers behind them.
+Tests on a small synthetic posts table. Do not rank or score yet.
+```
+
+**What the AI produced:**
+- `src/lj/creator_features.py`: Computes full feature vector for all 20 creators written to `data/processed/creator_features.csv`. Implements medians and IQR for plays/engagement, hidden likes detection (>25% switching basis to `comments_reshares_only`), sponsored-to-organic ratio withholding for <3 posts, brand categorization against `config.yaml` (`brand_categories`), and non-null companion reason columns for every NaN.
+- `label_map.yaml`: Proposed mapping connecting the 8 surviving findings from `docs/ad_findings.md` to creator post features, with detailed comments and uncertainty flags for user review.
+- `docs/creator_profiles.md`: Concise 3- to 4-line profiles for all 20 creators quoting `persona`, `what_feels_native`, and the underlying empirical figures (reach, engagement, kids on camera, sponsorship share, audience data status, competitor brands).
+- `tests/test_creator_features.py`: 3 unit tests using synthetic posts to test median/IQR calculations, hidden likes handling, ratio withholding, brand categorization, and companion reasons for NaNs, as well as production output shape verification.
+
+**What I checked:**
+- Verified `data/processed/creator_features.csv` has exactly 20 rows, one per creator.
+- Verified only expected columns contain NaNs (`organic_median_plays` for CR-17; `sponsored_median_plays` for CR-02, CR-14, CR-16; `sponsored_organic_ratio` for 11 creators with <3 posts in a group; `women_share`/`india_share`/`age_split`/`audience_platform` for 17 creators with unexported audience data).
+- Verified that all NaNs have complete non-null explanatory companion reasons.
+- Confirmed CR-17's hidden likes are handled correctly by switching engagement basis to `comments_reshares_only`.
+- Confirmed CR-05's child performer flag is True.
+- Confirmed CR-06 and CR-18 have 0.0% children on camera.
+- Ran `pytest -q` and confirmed all 28 tests pass cleanly.
+
+**What I changed or rejected, and why:**
+- Fixed array truth value error when parsing audience list fields (`top_countries`, `age_split`) by checking types explicitly.
+- Ensured reason columns output `"ok"` or explicit descriptive strings instead of empty strings so pandas does not parse them back as NaNs.
+- Changed boolean identity check (`is False`) in pytest to boolean casting / equality (`bool(...) is False`) to avoid numpy boolean singleton mismatch.
+
