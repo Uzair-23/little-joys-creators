@@ -105,6 +105,8 @@ def test_what_this_data_cannot_tell_you_section_present(tmp_path):
 
 def test_numbers_in_report_trace_to_tables():
     """Verify that every number in report.md and report.html is traceable to outputs/tables/."""
+    # Ensure reports are freshly rendered from current tables
+    render_reports()
     table_numbers = get_all_table_numbers()
     assert len(table_numbers) > 500, "Should have loaded rich set of numbers from outputs/tables"
 

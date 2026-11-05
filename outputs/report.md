@@ -192,31 +192,31 @@ Evaluated on 3 identical creative pairs (`LJ-003/059`, `LJ-036/056`, `LJ-073/093
 | Rank | Creator ID | Handle | Total Score | Creative Fit | Reach Quality | Eng Quality | Audience Fit | Risk Score | Confidence | Soft Flags |
 |---|---|---|---|---|---|---|---|---|---|---|
 
-| 1 | CR-08 | `@the_mum_wife_playbook` | **0.6829** | 0.4065 | 0.8772 | 0.8333 | 0.5000 | 1.0000 | medium | none |
+| 1 | CR-08 | `@the_mum_wife_playbook` | **0.6853** | 0.4144 | 0.8772 | 0.8333 | 0.5000 | 1.0000 | medium | none |
 
-| 2 | CR-02 | `@livesimply_withkripa` | **0.6651** | 0.2226 | 1.0000 | 0.9167 | 0.5000 | 0.9000 | medium | none |
+| 2 | CR-02 | `@livesimply_withkripa` | **0.6685** | 0.2338 | 1.0000 | 0.9167 | 0.5000 | 0.9000 | medium | none |
 
-| 3 | CR-04 | `@hello_ps8` | **0.6383** | 0.2196 | 0.7895 | 1.0000 | 0.5000 | 1.0000 | medium | none |
+| 3 | CR-04 | `@hello_ps8` | **0.6386** | 0.2206 | 0.7895 | 1.0000 | 0.5000 | 1.0000 | medium | none |
 
-| 4 | CR-03 | `@ekamichildcare` | **0.5960** | 0.3186 | 0.7018 | 0.7500 | 0.5000 | 1.0000 | medium | medical_authority_persona |
+| 4 | CR-03 | `@ekamichildcare` | **0.6001** | 0.3321 | 0.7018 | 0.7500 | 0.5000 | 1.0000 | medium | medical_authority_persona |
 
-| 5 | CR-16 | `@paediatrics_decoded` | **0.5180** | 0.6084 | 0.1754 | 0.5833 | 0.5000 | 1.0000 | medium | medical_authority_persona |
+| 5 | CR-16 | `@paediatrics_decoded` | **0.5167** | 0.6038 | 0.1754 | 0.5833 | 0.5000 | 1.0000 | medium | medical_authority_persona |
 
-| 6 | CR-15 | `@tej.lil.diary` | **0.5174** | 0.2513 | 0.4386 | 0.4167 | 0.9937 | 1.0000 | high | none |
+| 6 | CR-15 | `@tej.lil.diary` | **0.5122** | 0.2338 | 0.4386 | 0.4167 | 0.9937 | 1.0000 | high | none |
 
-| 7 | CR-19 | `@instamommy_suchi` | **0.5070** | 0.2082 | 0.9649 | 0.1667 | 0.5000 | 0.9500 | medium | sponsored_saturation (75.0% > 70%) |
+| 7 | CR-19 | `@instamommy_suchi` | **0.5071** | 0.2086 | 0.9649 | 0.1667 | 0.5000 | 0.9500 | medium | sponsored_saturation (75.0% > 70%) |
 
-| 8 | CR-13 | `@mumma_and_ridhu` | **0.4653** | 0.2307 | 0.3509 | 0.6667 | 0.5000 | 1.0000 | medium | none |
+| 8 | CR-13 | `@mumma_and_ridhu` | **0.4642** | 0.2272 | 0.3509 | 0.6667 | 0.5000 | 1.0000 | medium | none |
 
-| 9 | CR-01 | `@drgarima_mehta` | **0.4492** | 0.3420 | 0.5263 | 0.2500 | 0.5000 | 0.9000 | medium | medical_authority_persona |
+| 9 | CR-01 | `@drgarima_mehta` | **0.4408** | 0.3140 | 0.5263 | 0.2500 | 0.5000 | 0.9000 | medium | medical_authority_persona |
 
-| 10 | CR-12 | `@raising_zohran` | **0.3856** | 0.2954 | 0.0877 | 0.5000 | 0.5000 | 1.0000 | medium | none |
+| 10 | CR-12 | `@raising_zohran` | **0.3817** | 0.2827 | 0.0877 | 0.5000 | 0.5000 | 1.0000 | medium | none |
 
-| 11 | CR-17 | `@radhikabansal0908` | **0.3626** | 0.2471 | 0.6140 | 0.0000 | 0.5000 | 0.6000 | medium | sponsored_saturation (100.0% > 70%); hidden_metrics (30.0% hidden likes) |
+| 11 | CR-17 | `@radhikabansal0908` | **0.3588** | 0.2344 | 0.6140 | 0.0000 | 0.5000 | 0.6000 | medium | sponsored_saturation (100.0% > 70%); hidden_metrics (30.0% hidden likes) |
 
-| 12 | CR-07 | `@ohmother.in` | **0.3224** | 0.2166 | 0.2632 | 0.0833 | 0.5000 | 1.0000 | medium | none |
+| 12 | CR-07 | `@ohmother.in` | **0.3197** | 0.2074 | 0.2632 | 0.0833 | 0.5000 | 1.0000 | medium | none |
 
-| 13 | CR-18 | `@foodies_by_neha` | **0.2488** | 0.0239 | 0.0000 | 0.3333 | 0.5000 | 1.0000 | medium | none |
+| 13 | CR-18 | `@foodies_by_neha` | **0.2417** | 0.0000 | 0.0000 | 0.3333 | 0.5000 | 1.0000 | medium | none |
 
 
 ### Repository Pointers:
