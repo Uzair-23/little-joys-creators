@@ -126,3 +126,72 @@ Then add or adjust tests: unique pair count equals 3 on the real data, and a syn
 - `audit_days_live.csv` distribution matches: 26 at 0 days, 74 at -1 day, 0 flagged.
 - `audit_duplicates.csv` contains exactly 3 unique pairs with `match_type: both`.
 - All 10 tests passed in `pytest -q`.
+
+
+---
+
+## Phase 2: What works in the brand's own ads
+**Date/time:** 2026-11-05
+**Mode / model:** Antigravity / Gemini 3.8 Flash (High)
+**Prompt:**
+```text
+Read docs/data_audit.md and config.yaml. Do only Phase 2, following PRD.md sections 8.2 (stats, metrics, ad_model) and 9. Before writing code, produce a short plan covering the metrics, the analysis-set rules, the pre-registered features, and the finding rule, and wait for my approval. After approval: implement stats.py (weighted_ratio, bootstrap_ci, bh_correct, percentile_rank), metrics.py and ad_model.py. Use the duplicate-creative pairs to quantify noise and print that number. Save all tables to outputs/tables/ (ad_metrics.csv, ad_noise_from_duplicates.csv, ad_group_metrics.csv, ad_findings.csv, ad_not_concluded.csv) and charts to outputs/figures/ (forest-style plots with intervals, not bare bars). Add tests on a tiny hand-made DataFrame where the correct spend-weighted ROAS is known, and a test that a pattern depending on one outlier is rejected. Report which candidate findings fail the finding rule and why. Do not describe any pattern as proven.
+```
+
+**What the AI produced:**
+- A detailed Phase 2 pre-implementation plan covering funnel metrics, analysis set rules, noise calibration thresholds from duplicate pairs, and 5-part finding rule criteria.
+- `src/lj/stats.py`: Statistical aggregation and inference module implementing `weighted_ratio`, `bootstrap_ci` (5,000 iterations, seed 42), `bh_correct` (FDR adjustment), and `percentile_rank`.
+- `src/lj/metrics.py`: Computes 8 funnel metrics (`roas`, `cpa`, `cvr`, `ctr`, `hook_rate`, `hold_rate`, `atc_rate`, `aov`) with safe divide handling.
+- `src/lj/ad_model.py`: End-to-end model pipeline that builds `data/processed/ads_analysis_set.csv` (79 ads), computes duplicate noise (`outputs/tables/ad_noise_from_duplicates.csv`), computes group metrics with bootstrap CIs (`outputs/tables/ad_group_metrics.csv`), evaluates the 5-part finding rule producing `outputs/tables/ad_findings.csv` and `outputs/tables/ad_not_concluded.csv`, and generates forest plots and funnel charts in `outputs/figures/`.
+- `docs/ad_findings.md`: Complete report on surviving findings (F01–F10), observational noise floor calibration, outlier robustness against `LJ-004`, and non-concluded patterns with explicit rejection reasons.
+- `tests/test_stats.py`, `tests/test_metrics.py`, `tests/test_ad_model.py`: 13 new unit tests covering hand-crafted spend-weighted ROAS, synthetic outlier rejection, duplicate noise calibration, metric calculations, and safe divide handling.
+
+**What I checked:**
+- Verified `weighted_ratio` on hand-crafted DataFrame matches expected spend-weighted ratio (5200/1100 = 4.727 != 3.5 simple mean).
+- Verified duplicate creative pairs baseline noise: median ROAS delta = 0.4914, median CVR delta = 0.0046.
+- Verified that `hook_type == story_open` and `language == Hinglish` are rejected due to dependency on `LJ-004`.
+- Verified analysis set row count is 79 (excludes `LJ-089` and 20 ads with spend < ₹10k).
+- Ran `pytest -q` and confirmed all 23 tests passed.
+
+**What I changed or rejected, and why:**
+- Fixed signature compatibility for `bootstrap_ci` to accept both `n_iterations` and `n_boot`, and `bh_correct` to return either adjusted p-values or tuple with rejection mask when `alpha` is supplied.
+- Fixed `build_analysis_set` to support returning exclusions (`return_exclusions=True`) and handle both `spend` and `spend_inr` column naming.
+- Ensured `percentile_rank` correctly supports `ascending` flag.
+
+
+---
+
+## Phase 2 Correction Pass: Strict 50% LJ-004 Rule, Leave-One-Out, and Pattern Overlap
+**Date/time:** 2026-11-05
+**Mode / model:** Antigravity / Gemini 3.8 Flash (High)
+**Prompt:**
+```text
+Do a Phase 2 correction pass. Do not loosen any rule.
+
+Enforce the LJ-004 test exactly as specified: the effect without LJ-004 must have the same sign and at least 50% of the baseline effect. Print a table for all 59 tested patterns: effect with, effect without, share retained, and pass/fail. I calculate that child_led (+2.33 to +0.93), child_on_screen=one, child_in_first_3s, curiosity_gap, protein_intake, semi_pro and milk_mix_powder all keep under 50%. Show me what the code says, and re-run so the findings table reflects the rule.
+LJ-004 carries all of those labels. Add a table outputs/tables/ad_lj004_traits.csv listing LJ-004’s label values and which patterns it belongs to, and add a column depends_on_lj004 to the findings and not-concluded tables.
+Add leave-one-out influence for the top 5 ads by spend (not only LJ-004): for each surviving pattern, report the effect when each of those ads is dropped.
+Add outputs/tables/ad_pattern_overlap.csv with the Jaccard overlap of ad sets between patterns, and note in docs/ad_findings.md that overlapping patterns are not independent.
+Search the code and tell me exactly where the duplicate-pair noise floor is used. It must be context only. Remove any use as a pass/fail threshold, including the “within noise” label for Hinglish.
+Treat product_form as a context variable, not a creative finding. When testing it, do not stratify by itself; stratify by launch period only.
+Confirm the findings table has columns: tier (supported/directional), metric_family, 95% interval on the difference, adjusted p-value, label error rate, depends_on_lj004. List any that are missing and add them.
+Add a test that a pattern keeping under 50% of its effect without LJ-004 is rejected.
+Update docs/ad_findings.md with the honest framing: which patterns survive, which depend on LJ-004, which overlap, and the Hindi attention-versus-sales split. Log this correction in docs/ai_usage/corrections.md as an earlier failure to apply the 50% rule.
+Run pytest, show real output, and stop.
+```
+
+**What the AI produced:**
+- Updated `src/lj/ad_model.py` with the exact 50% retention test (`effect_no / effect_with >= 0.50` and same sign) without LJ-004.
+- Added `outputs/tables/ad_lj004_traits.csv` showing all 10 labels of LJ-004, their spend/revenue shares, and effect retention.
+- Added `outputs/tables/ad_leave_one_out_influence.csv` evaluating leave-one-out impact of the top 5 ads by spend (LJ-004, LJ-069, LJ-035, LJ-063, LJ-097).
+- Added `outputs/tables/ad_pattern_overlap.csv` computing pairwise Jaccard similarity across candidate patterns.
+- Reclassified `product_form` as a context variable stratified by launch period only (`outputs/tables/ad_product_form_context.csv`).
+- Removed all pass/fail cutoff usage of duplicate-pair noise floor.
+- Updated `ad_findings.csv` to include all required columns (`tier`, `metric_family`, `ci_diff_low`, `ci_diff_high`, `adj_p_value`, `label_error_rate`, `depends_on_lj004`).
+- Added tests in `tests/test_ad_model.py` for synthetic 50% retention rejection, real LJ-004 dependent pattern rejection, and required columns check.
+- Updated `docs/ad_findings.md` and `docs/ai_usage/corrections.md`.
+
+**What I checked:**
+- Verified that all 10 traits of LJ-004 keep under 50% on ROAS lift without LJ-004.
+- Verified that 8 patterns survive (2 Supported: Hindi attention, Child in first 3s attention; 6 Directional).
+- Confirmed all 25 tests pass in `pytest -q`.
