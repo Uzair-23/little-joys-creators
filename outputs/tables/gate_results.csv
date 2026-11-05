@@ -1,0 +1,21 @@
+creator_id,handle,passed_all,already_partner,audience_mismatch,direct_competitor,no_family_content,too_little_evidence,gate_reasons,soft_flags
+CR-01,drgarima_mehta,True,True,True,True,True,True,all_gates_passed,medical_authority_persona
+CR-02,livesimply_withkripa,True,True,True,True,True,True,all_gates_passed,none
+CR-03,ekamichildcare,True,True,True,True,True,True,all_gates_passed,medical_authority_persona
+CR-04,hello_ps8,True,True,True,True,True,True,all_gates_passed,none
+CR-05,sia_3vedi,False,True,True,False,True,True,direct_competitor (active partnership with: 'Gritzo'),child_performer_flag
+CR-06,thatkushalmistry,False,True,True,True,False,True,no_family_content (child/family content share 5.0% < 15%),none
+CR-07,ohmother.in,True,True,True,True,True,True,all_gates_passed,none
+CR-08,the_mum_wife_playbook,True,True,True,True,True,True,all_gates_passed,none
+CR-09,doc_mama_and_babies,False,False,True,True,True,True,already_partner (sponsored post with brand: 'Little joys'),sponsored_saturation (80.0% > 70%); inactive (48 days > 45d); medical_authority_persona
+CR-10,couple_adishiv,False,True,True,False,True,True,direct_competitor (active partnership with: 'Gritzo'),none
+CR-11,raja_choudhary04,False,True,True,False,True,True,direct_competitor (active partnership with: 'Gritzo'),none
+CR-12,raising_zohran,True,True,True,True,True,True,all_gates_passed,none
+CR-13,mumma_and_ridhu,True,True,True,True,True,True,all_gates_passed,none
+CR-14,parentingtips_surat,False,True,False,True,True,True,audience_mismatch (india_share=64.4% < 80%),medical_authority_persona
+CR-15,tej.lil.diary,True,True,True,True,True,True,all_gates_passed,none
+CR-16,paediatrics_decoded,True,True,True,True,True,True,all_gates_passed,medical_authority_persona
+CR-17,radhikabansal0908,True,True,True,True,True,True,all_gates_passed,sponsored_saturation (100.0% > 70%); hidden_metrics (30.0% hidden likes)
+CR-18,foodies_by_neha,True,True,True,True,True,True,all_gates_passed,none
+CR-19,instamommy_suchi,True,True,True,True,True,True,all_gates_passed,sponsored_saturation (75.0% > 70%)
+CR-20,storiesbyvihaa,False,False,False,True,True,True,already_partner (audience historical partner: '['Little Joys']'); audience_mismatch (women_share=29.9% < 50%),none

@@ -231,3 +231,33 @@ Tests on a small synthetic posts table. Do not rank or score yet.
 - Ensured reason columns output `"ok"` or explicit descriptive strings instead of empty strings so pandas does not parse them back as NaNs.
 - Changed boolean identity check (`is False`) in pytest to boolean casting / equality (`bool(...) is False`) to avoid numpy boolean singleton mismatch.
 
+---
+
+## Phase 4: Gates, Scoring, and Creator Ranking
+**Date/time:** 2026-11-05
+**Mode / model:** Antigravity / Gemini 3.8 Flash (High)
+**Prompt:**
+```text
+Read docs/ad_findings.md, docs/creator_profiles.md, label_map.yaml and PRD.md section 8.2 (gates, scoring). Do only Phase 4. First write a plan describing the gates and score components and wait for my approval. After approval: implement gates.py (each gate returns pass/fail plus a human-readable reason; thresholds from config.yaml) and scoring.py (components, weights from config.yaml, confidence label). Output outputs/tables/gate_results.csv and outputs/tables/creator_ranking.csv with every creator, gate results, component scores, total, rank, confidence, findings used and soft flags. The creative-fit component must use only surviving findings from docs/ad_findings.md and list which ones it used. Write docs/selection_logic.md explaining each gate and weight in plain English. Tests: CR-20 fails the already-a-partner gate; a synthetic creator with 100% sponsored posts gets a risk penalty; an unknown audience gives the neutral score and lowers confidence. Do not choose the final 5 yet; show the ranking and the borderline cases (ranks 4 to 8).
+```
+
+**What the AI produced:**
+- Wrote detailed implementation plan for gates and score components and waited for user approval.
+- `src/lj/gates.py`: Evaluates 5 hard disqualification gates (`already_partner`, `audience_mismatch`, `direct_competitor`, `no_family_content`, `too_little_evidence`) and logs non-disqualifying soft flags (`child_performer_flag`, `sponsored_saturation`, `hidden_metrics`, `inactive`, `medical_authority_persona`). Writes `outputs/tables/gate_results.csv` (13 pass, 7 fail).
+- `src/lj/scoring.py`: Computes 5 normalized components (`creative_fit`, `reach_quality`, `engagement_quality`, `audience_fit`, `commercial_risk`) weighted by `config.yaml` weights, logs findings used per creator, assigns 0–5 confidence points, and writes `outputs/tables/creator_ranking.csv`.
+- `docs/selection_logic.md`: Plain-English explanation of each gate, component, weighting rationale, and confidence scheme.
+- `tests/test_gates_and_scoring.py`: 5 tests covering CR-20 already-partner gate failure, 100% sponsored risk penalty, unknown audience neutral score (0.50) and confidence impact, ranking table schema, and gate disqualification reasons.
+
+**What I checked:**
+- Verified CR-20 and CR-09 fail `already_partner`.
+- Verified CR-05, CR-10, CR-11 fail `direct_competitor` due to Gritzo.
+- Verified CR-06 fails `no_family_content` (0% kids/food).
+- Verified CR-14 and CR-20 fail `audience_mismatch`.
+- Verified passing creators receive ranks 1 to 13, and disqualified creators have `passed_gates == False`.
+- Verified `outputs/tables/gate_results.csv` and `outputs/tables/creator_ranking.csv` are properly structured.
+- Ran `pytest -q` and confirmed all 33 tests pass.
+
+**What I changed or rejected, and why:**
+- Fixed boolean equality assertions (`assert bool(row[col]) is False`) to handle pandas numpy boolean values cleanly.
+
+
