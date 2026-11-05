@@ -1,0 +1,354 @@
+claim,n_ads,supporting_ad_ids,total_spend_inr,total_revenue_inr,spend_weighted_roas,needs_compliance_review
+"Made of pea, brown rice, and soy protein",1,LJ-004,659494.0,3298791.0,5.0,True
+1 scoop (15g) contains 12g plant protein,1,LJ-004,659494.0,3298791.0,5.0,True
+Roti taste remains completely unchanged,1,LJ-004,659494.0,3298791.0,5.0,False
+"Provides 12g protein per serve from millet, nut powder, makhana, and plant protein blend",1,LJ-069,594405.0,358882.0,0.6,True
+Rotis remain soft and do not become hard or stiff,1,LJ-069,594405.0,358882.0,0.6,False
+Mixing protein powder into roti dough does not alter the taste of rotis,1,LJ-069,594405.0,358882.0,0.6,True
+Sweetened naturally with jaggery and dates,4,LJ-007; LJ-038; LJ-042; LJ-089,508306.0,121319.0,0.24,False
+"Contains ragi, bajra, almonds, and walnuts",3,LJ-027; LJ-042; LJ-089,451995.0,30275.0,0.07,False
+"Contains protein, calcium, and vitamin D",1,LJ-089,426568.0,0.0,0.0,True
+Fills children's nutritional gaps,1,LJ-089,426568.0,0.0,0.0,False
+Sweetened with jaggery and dates,6,LJ-009; LJ-029; LJ-045; LJ-075; LJ-087; LJ-095,413039.0,740112.0,1.79,False
+Zero added sugar,3,LJ-048; LJ-051; LJ-080,402028.0,427688.0,1.06,False
+Kids keep coming back 2-3 times to drink Nutrimix milkshake,1,LJ-035,373407.0,767728.0,2.06,False
+Naturally sweetened nutrition shake that tastes chocolatey and delicious to children,1,LJ-035,373407.0,767728.0,2.06,False
+"Nutrimix powder contains protein, nuts, millets",1,LJ-063,331977.0,355797.0,1.07,True
+"Sweetened with jaggery and dates, no added refined sugar",1,LJ-063,331977.0,355797.0,1.07,False
+Gummies made from chicory root fiber don't stick to children's teeth,1,LJ-063,331977.0,355797.0,1.07,True
+No taste change,2,LJ-006; LJ-097,315958.0,782493.0,2.48,False
++12g Protein per scoop,2,LJ-006; LJ-097,315958.0,782493.0,2.48,True
+Ready in only 10 minutes,1,LJ-097,285265.0,732390.0,2.57,False
+"Contains ragi, bajra, almonds, walnuts, calcium, and DHA (Omega-3)",1,LJ-046,269138.0,245634.0,0.91,True
+"Sweetened naturally with stevia, ideal for vegetarian families",1,LJ-046,269138.0,245634.0,0.91,False
+"12g protein in every 2 scoops, equivalent to 2 eggs",1,LJ-046,269138.0,245634.0,0.91,True
+"No artificial colours, flavours, or preservatives",2,LJ-044; LJ-047,252951.0,157719.0,0.62,False
+Bridges nutritional gaps for moms with no added sugar,1,LJ-015,217771.0,286408.0,1.32,False
+Contains Vitamin C and Zinc to support the immune system,1,LJ-015,217771.0,286408.0,1.32,True
+Contains Iron and B12 to support energy metabolism,1,LJ-015,217771.0,286408.0,1.32,True
+Contains chicory root for nutrient absorption and good gut health,1,LJ-015,217771.0,286408.0,1.32,True
+Contains Biotin to support hair and skin,1,LJ-015,217771.0,286408.0,1.32,False
+Contains Vitamin D3 to support calcium absorption,1,LJ-015,217771.0,286408.0,1.32,True
+Made with millets and dry fruits,2,LJ-009; LJ-091,212557.0,423912.0,1.99,False
+No artificial preservatives,1,LJ-051,196872.0,125544.0,0.64,False
+Real fruits and veggies flavoured and colored,1,LJ-051,196872.0,125544.0,0.64,False
+Formulated for kids above 2 years old,1,LJ-051,196872.0,125544.0,0.64,False
+"Contains Vitamin C, Curcumin, B12, D3, Zinc, and Chicory root prebiotic fibre",1,LJ-051,196872.0,125544.0,0.64,True
+9g protein in 2 scoops,1,LJ-009,194675.0,400842.0,2.06,True
+Little Joys Nutrimix 7+ chocolate flavour,1,LJ-009,194675.0,400842.0,2.06,False
+Contains 12 vitamins and minerals,1,LJ-080,185504.0,270301.0,1.46,False
+Great for gut health,1,LJ-080,185504.0,270301.0,1.46,True
+Uses real fruits and vegetables,1,LJ-080,185504.0,270301.0,1.46,False
+Plant-based prebiotic fiber from chicory root,1,LJ-080,185504.0,270301.0,1.46,False
+1 bowl with 200 ml milk provides ~12g protein,1,LJ-021,165331.0,287676.0,1.74,True
+Contains nuts and seeds in every bite,1,LJ-021,165331.0,287676.0,1.74,False
+"Made with whole grain oats, sweetened with jaggery and dates",1,LJ-021,165331.0,287676.0,1.74,False
+Breakfast ready in under a minute,1,LJ-021,165331.0,287676.0,1.74,False
+Contains 11+ essential vitamins and minerals,2,LJ-040; LJ-047,156006.0,98579.0,0.63,False
+Sweetened naturally with jaggery and dates without added effort,1,LJ-014,148430.0,179223.0,1.21,False
+Replaces hour-long homemade preparation with two scoops,1,LJ-014,148430.0,179223.0,1.21,False
+"Nutrimix contains traditional homemade ingredients like ragi, bajra, almonds, and walnuts",1,LJ-014,148430.0,179223.0,1.21,False
+Contains 23 vitamins and minerals,2,LJ-029; LJ-095,144181.0,233078.0,1.62,False
+"Contains 11+ essential vitamins and minerals including Vitamin C, Curcumin, and Zinc",1,LJ-044,140624.0,88894.0,0.63,True
+Helps fill everyday nutrition gaps and supports immunity,1,LJ-044,140624.0,88894.0,0.63,True
+Made with chicory root fiber for better digestion and nutrient absorption,1,LJ-044,140624.0,88894.0,0.63,True
+5 grams of protein per 2 scoops,2,LJ-045; LJ-095,137001.0,233455.0,1.7,True
+2 scoops of Nutrimix with milk provides almost as much protein as 2 eggs,1,LJ-081,135335.0,119938.0,0.89,True
+"Protein comes from skimmed milk powder, almonds, and walnuts",1,LJ-081,135335.0,119938.0,0.89,True
+"Milk provides calcium, but Vitamin D from sunlight is required for absorption",1,LJ-008,129131.0,67422.0,0.52,True
+"Contains Vitamin K, millets, dry fruits, and 23 vitamins and minerals",1,LJ-008,129131.0,67422.0,0.52,True
+One serving of Little Joys Nutrimix provides 50% daily requirement of Vitamin D,1,LJ-008,129131.0,67422.0,0.52,True
+Vitamin K directs absorbed calcium to bones and teeth,1,LJ-008,129131.0,67422.0,0.52,True
+"No added artificial flavours, colours, preservatives, or palm oil",2,LJ-003; LJ-059,121245.0,91955.0,0.76,False
+"Strawberry Honey Jam made with whole strawberries, prebiotic plant fibre, and honey",2,LJ-003; LJ-059,121245.0,91955.0,0.76,False
+Sweetened with strawberry FOS and honey with no refined sugar,2,LJ-003; LJ-059,121245.0,91955.0,0.76,False
+Little Joys Chocolate Hazelnut Spread sweetened only with jaggery,2,LJ-003; LJ-059,121245.0,91955.0,0.76,False
+Delivers complete multi-benefit nutrition in a single glass,1,LJ-078,119236.0,91445.0,0.77,False
+Contains 9g protein for daily energy and strength,1,LJ-078,119236.0,91445.0,0.77,True
+Contains Ragi and Vitamin D3 to aid calcium absorption,1,LJ-078,119236.0,91445.0,0.77,True
+Contains Vitamin C and Zinc to boost immunity and fight sickness,1,LJ-078,119236.0,91445.0,0.77,True
+No added sugar,3,LJ-064; LJ-071; LJ-084,118260.0,97128.0,0.82,False
+"Provides protein from milk, millets, and nuts to sustain all-day energy",1,LJ-096,113491.0,93174.0,0.82,True
+Naturally sweetened with jaggery and dates with no artificial sweeteners,1,LJ-096,113491.0,93174.0,0.82,False
+"Contains millets, dry fruits, jaggery, and dates",1,LJ-096,113491.0,93174.0,0.82,False
+Fills nutrition gaps and supports immunity,1,LJ-047,112327.0,68825.0,0.61,True
+"Contains Vitamin C, Turmeric, Vitamin B12, and Zinc",1,LJ-047,112327.0,68825.0,0.61,True
+Made with fiber from Chicory Root,1,LJ-047,112327.0,68825.0,0.61,False
+Zero artificial sweeteners,1,LJ-095,108992.0,209982.0,1.93,False
+Made with healthy ingredients like millets and dry fruits,1,LJ-095,108992.0,209982.0,1.93,False
+Naturally sweetened with jaggery and dates,3,LJ-005; LJ-082; LJ-086,92931.0,98674.0,1.06,False
+Contains millets and dry fruits,3,LJ-045; LJ-068; LJ-075,90832.0,109945.0,1.21,False
+No artificial sweeteners,2,LJ-022; LJ-029,90504.0,66141.0,0.73,False
+Specially formulated for mothers,2,LJ-073; LJ-093,90072.0,107259.0,1.19,False
+"Contains Vitamin B12, Vitamin D3, Biotin, Vitamin C, and Iron in a tasty gummy format",2,LJ-073; LJ-093,90072.0,107259.0,1.19,True
+Sweetened with jaggery only,2,LJ-018; LJ-076,88318.0,104891.0,1.19,False
+100% plant protein,3,LJ-036; LJ-056; LJ-071,86000.0,140153.0,1.63,True
+12g of extra protein per scoop,2,LJ-036; LJ-056,79450.0,126752.0,1.6,True
+"Can be mixed into regular meals like roti, dosa, chilla, and pancakes",2,LJ-036; LJ-056,79450.0,126752.0,1.6,False
+"No taste change, no smell",2,LJ-036; LJ-056,79450.0,126752.0,1.6,False
+"No added sugar, no preservatives",2,LJ-036; LJ-056,79450.0,126752.0,1.6,False
+Every single batch is lab tested at Eurofins with accessible batch-level reports via QR code on pack,1,LJ-052,76909.0,65691.0,0.85,False
+Gentle and easy on children's digestive systems,1,LJ-052,76909.0,65691.0,0.85,False
+"100% plant-based protein blend of soy, brown rice, and pea protein",1,LJ-052,76909.0,65691.0,0.85,True
+"Contains superfoods: Ragi, Bajra, Almonds, Walnuts",1,LJ-020,75686.0,159194.0,2.1,False
+Provides 2.4g Fibre,1,LJ-020,75686.0,159194.0,2.1,True
+Gummies have zero added sugar,1,LJ-020,75686.0,159194.0,2.1,False
+Provides 40% of daily protein requirement,1,LJ-020,75686.0,159194.0,2.1,True
+"Contains Vitamins B, C, D, A, and Zinc",1,LJ-020,75686.0,159194.0,2.1,True
+Naturally sweetened with Jaggery and Dates,2,LJ-022; LJ-066,75247.0,55962.0,0.74,False
+23 essential vitamins and minerals,2,LJ-022; LJ-066,75247.0,55962.0,0.74,False
+Supports everyday nutrition,2,LJ-031; LJ-032,74352.0,69463.0,0.93,False
+Provides 5g protein and 23 vitamins and minerals per 2 scoops,1,LJ-086,73359.0,68718.0,0.94,True
+Child has been consuming it for the last 1 year during morning tea time,1,LJ-086,73359.0,68718.0,0.94,False
+"Made with superfoods: ragi, bajra, almonds, walnuts",1,LJ-086,73359.0,68718.0,0.94,False
+Packed with protein,2,LJ-018; LJ-079,68219.0,56888.0,0.83,True
+1 scoop provides 12g of natural protein,1,LJ-017,65860.0,50526.0,0.77,True
+Does not change color or taste of food,1,LJ-017,65860.0,50526.0,0.77,False
+"Can be mixed into roti, chilla, dosa, or paratha batter/dough",1,LJ-017,65860.0,50526.0,0.77,False
+Sweetened by chicory root (natural dietary fiber),1,LJ-084,65381.0,48247.0,0.74,False
+Safe and recommended for daily consumption unlike chocolates,1,LJ-084,65381.0,48247.0,0.74,False
+"Not a toffee, it is a multivitamin supplement",1,LJ-084,65381.0,48247.0,0.74,False
+Reports verify actual protein content against claims,1,LJ-085,65212.0,52636.0,0.81,True
+Reports verify testing for 4 heavy metals,1,LJ-085,65212.0,52636.0,0.81,False
+Scanning the QR code on the tub provides 5 lab reports from Eurofins,1,LJ-085,65212.0,52636.0,0.81,False
+Easiest protein hack,1,LJ-025,61372.0,112299.0,1.83,True
+Light on the gut,1,LJ-025,61372.0,112299.0,1.83,True
+"Covers Calcium, D3, Magnesium, and Probiotics",1,LJ-025,61372.0,112299.0,1.83,True
+Two scoops of Nutrimix with milk provides protein equivalent to almost two eggs,1,LJ-050,55719.0,152715.0,2.74,True
+"Protein sourced from skimmed milk powder, almonds, and walnuts",1,LJ-050,55719.0,152715.0,2.74,True
+24g protein is roughly equal to 7-8 katoris of dal,1,LJ-050,55719.0,152715.0,2.74,True
+9-year-old kids require at least 24g protein daily,1,LJ-050,55719.0,152715.0,2.74,True
+6g protein per serving,1,LJ-022,55315.0,43045.0,0.78,True
+"Made with Ragi, Bajra, Almonds, Walnuts",1,LJ-022,55315.0,43045.0,0.78,False
+Provides 23 vitamins and minerals plus 5g protein per serving,1,LJ-007,54851.0,88414.0,1.61,True
+"Made with ragi, bajra, almonds, walnuts",1,LJ-007,54851.0,88414.0,1.61,False
+Fills nutritional gaps,1,LJ-007,54851.0,88414.0,1.61,False
+"Adds extra nutrition including ragi, bajra, almonds, and walnuts",1,LJ-010,54548.0,100251.0,1.84,False
+"Does not make unrealistic height or weight gain promises, designed solely to fill nutritional gaps",1,LJ-010,54548.0,100251.0,1.84,True
+Completely sweetened with jaggery and dates,1,LJ-010,54548.0,100251.0,1.84,False
+Makes milk tasty,1,LJ-010,54548.0,100251.0,1.84,False
+"Each gummy contains 2.3g fiber, equivalent to 1 banana",1,LJ-023,54072.0,75652.0,1.4,True
+"Contains superfoods ragi, bajra, almonds, and walnuts",1,LJ-023,54072.0,75652.0,1.4,False
+One glass of Nutrimix fills 40% of kid's daily protein requirement,1,LJ-023,54072.0,75652.0,1.4,True
+Gummies are sweetened with chicory roots for gut health,1,LJ-023,54072.0,75652.0,1.4,True
+Ready in 15 minutes,1,LJ-018,52814.0,39539.0,0.75,False
+"Made with millets (ragi, jowar) and oats flour",1,LJ-018,52814.0,39539.0,0.75,False
+12g protein per scoop,3,LJ-034; LJ-077; LJ-098,51908.0,53376.0,1.03,True
+"3 symptoms of calcium deficiency: night leg pain, irritability, low energy",1,LJ-019,50773.0,53164.0,1.05,True
+"Little Joys Nutrimix provides Calcium, Vitamin D3, and Vitamin K",1,LJ-019,50773.0,53164.0,1.05,True
+"Rich in calcium, vitamin K, and protein for growing bones",1,LJ-019,50773.0,53164.0,1.05,True
+1 glass provides 50% of daily Vitamin D requirement,1,LJ-019,50773.0,53164.0,1.05,True
+Contains 11 essential vitamins and minerals,2,LJ-039; LJ-064,49430.0,39751.0,0.8,False
+Sweetened with jaggery,3,LJ-054; LJ-062; LJ-079,49286.0,79444.0,1.61,False
+Delicious taste,1,LJ-031,49260.0,47773.0,0.97,False
+"Contains fiber and vitamins C, B12, and D3",1,LJ-031,49260.0,47773.0,0.97,False
+"Not candy, it is a multivitamin gummy",1,LJ-031,49260.0,47773.0,0.97,False
+"No added colors, flavors, or preservatives",1,LJ-090,47684.0,18681.0,0.39,False
+Chicory root fiber supports kids' gut health,1,LJ-090,47684.0,18681.0,0.39,True
+Supports kids' immunity,1,LJ-090,47684.0,18681.0,0.39,True
+Aids absorption and digestion support,1,LJ-064,46329.0,35480.0,0.77,True
+"Includes B12, Iron, D3, Biotin, and dietary fiber",1,LJ-064,46329.0,35480.0,0.77,True
+"Supports hair, energy, immunity, and bone health",1,LJ-064,46329.0,35480.0,0.77,True
+Every box provides a QR code linked to an independent lab analytical report verifying nutritional value,1,LJ-033,44798.0,43626.0,0.97,False
+Zero misleading or incorrect labelling,1,LJ-033,44798.0,43626.0,0.97,False
+Little Joys is the only kids nutrition brand in India offering this level of transparency,1,LJ-033,44798.0,43626.0,0.97,False
+"Ingredients listed on label match exactly what is in the jar (Ragi, Jowar, Bajra, Dry Fruits, Real Jaggery, Dates)",1,LJ-033,44798.0,43626.0,0.97,False
+Fills nutritional gaps in children's diet caused by picky eating,1,LJ-037,44365.0,44219.0,1.0,False
+Supports complete overall nutrition for kids,1,LJ-037,44365.0,44219.0,1.0,False
+Brings all essential vitamins and minerals together in one gummy,1,LJ-037,44365.0,44219.0,1.0,False
+Provides 100% daily requirement of Vitamin B12 and Vitamin D3,1,LJ-040,43679.0,29754.0,0.68,True
+Formulated with prebiotic fibre made from Chicory Root,1,LJ-040,43679.0,29754.0,0.68,False
+Feeds gut bacteria to support digestion,1,LJ-040,43679.0,29754.0,0.68,True
+"Ragi is packed with calcium, iron, and fiber",1,LJ-053,41910.0,36603.0,0.87,True
+"Contains ragi, bajra, almonds, walnuts, jaggery, and dates",1,LJ-053,41910.0,36603.0,0.87,False
+No artificial sweeteners or preservatives,1,LJ-053,41910.0,36603.0,0.87,False
+No preservatives,2,LJ-062; LJ-071,37691.0,75496.0,2.0,False
+"Can be mixed directly into atta or batter for rotis, dosas, cheelas, or pancakes",1,LJ-061,36976.0,62085.0,1.68,False
+Unflavored powder does not alter familiar taste or texture,1,LJ-061,36976.0,62085.0,1.68,False
+No need for a separate protein shake,1,LJ-061,36976.0,62085.0,1.68,True
+"100% plant-based, zero whey, zero sugar",1,LJ-061,36976.0,62085.0,1.68,False
+"One 15g scoop provides 12g protein from soy, brown rice, and peas",1,LJ-061,36976.0,62085.0,1.68,True
+Contains real fruits and veggies extracts,1,LJ-024,36249.0,32361.0,0.89,False
+Helps boost immunity,1,LJ-024,36249.0,32361.0,0.89,True
+"No added sugar, artificial colour, or preservatives",1,LJ-024,36249.0,32361.0,0.89,False
+Made with chicory root fiber which supports gut health,1,LJ-024,36249.0,32361.0,0.89,True
+Packed with protein (8g protein per 100g flour),1,LJ-076,35504.0,65352.0,1.84,True
+Crispy on the outside and fluffy on the inside,1,LJ-076,35504.0,65352.0,1.84,False
+"Versatile mix for pancakes, waffles, and muffins",1,LJ-076,35504.0,65352.0,1.84,False
+Zero maida,1,LJ-076,35504.0,65352.0,1.84,False
+"Made with ragi, jowar, and oats flour",1,LJ-076,35504.0,65352.0,1.84,False
+"Made with millets and dry fruits (ragi, bajra, almonds, walnuts)",1,LJ-029,35189.0,23096.0,0.66,False
+Provides 5 grams of protein per serving (two scoops),1,LJ-029,35189.0,23096.0,0.66,True
+Made without whey,1,LJ-068,35039.0,31880.0,0.91,False
+"Protein supports muscles, skin, nails, hair, and immunity",1,LJ-068,35039.0,31880.0,0.91,True
+"protein sourced from skim milk powder, almonds, and walnuts",1,LJ-068,35039.0,31880.0,0.91,True
+One glass provides 40% of a child's daily protein requirement,1,LJ-068,35039.0,31880.0,0.91,True
+Kids need more protein than adults,1,LJ-068,35039.0,31880.0,0.91,True
+Made with millets and oats,1,LJ-055,32333.0,80319.0,2.48,False
+Kids keep coming back multiple times because they love the taste,1,LJ-055,32333.0,80319.0,2.48,False
+23 vitamins and minerals,1,LJ-055,32333.0,80319.0,2.48,False
+No refined sugar,1,LJ-062,31141.0,62095.0,1.99,False
+No regular maida,1,LJ-062,31141.0,62095.0,1.99,False
+"Made with millets, jowar, ragi, and oats",1,LJ-062,31141.0,62095.0,1.99,False
+Contains 8 grams of protein per 100 grams of flour,1,LJ-062,31141.0,62095.0,1.99,True
+Cooks in 5-10 minutes,1,LJ-006,30693.0,50103.0,1.63,False
+Vegetarian protein hack,1,LJ-006,30693.0,50103.0,1.63,True
+Zero misleading or incorrect labelling.,1,LJ-092,30598.0,25054.0,0.82,False
+Lab report validates actual nutritional value and ingredient quality.,1,LJ-092,30598.0,25054.0,0.82,False
+Only kids nutrition brand in India providing this level of transparency.,1,LJ-092,30598.0,25054.0,0.82,False
+"All ingredients on the label (Ragi, Jowar, Bajra, dry fruits, real jaggery, dates) are physically in the formula.",1,LJ-092,30598.0,25054.0,0.82,False
+Every box contains a QR code linking to a batch-specific lab report.,1,LJ-092,30598.0,25054.0,0.82,False
+"Contains 23 vitamins and minerals, calcium, and Vitamin D3",1,LJ-045,28009.0,23473.0,0.84,True
+Completes breakfast rather than replacing it,1,LJ-045,28009.0,23473.0,0.84,False
+Milk alone isn't enough for strong bones,1,LJ-028,27846.0,30154.0,1.08,True
+sunlight/vitamin D is required to absorb calcium.,1,LJ-028,27846.0,30154.0,1.08,True
+Just 2 scoops of Nutrimix 7+ provides up to 50% of the daily requirement of Vitamin D.,1,LJ-028,27846.0,30154.0,1.08,True
+"Contains Calcium, Vitamin K, Phosphorus, and Magnesium to support bone health.",1,LJ-028,27846.0,30154.0,1.08,True
+Provides 9 grams of protein per serving with milk,1,LJ-075,27784.0,54592.0,1.96,True
+"Contains fiber, Vitamin C, B12, and D3",1,LJ-032,25092.0,21690.0,0.86,True
+Contains 11+ vitamins & minerals,1,LJ-041,24673.0,39346.0,1.59,False
+Made from fiber to assist digestion and nutrient absorption,1,LJ-041,24673.0,39346.0,1.59,True
+Contains 6 fruits & veggies extract,1,LJ-041,24673.0,39346.0,1.59,False
+Helps child finish daily tiffin and meet nutritional requirements,1,LJ-041,24673.0,39346.0,1.59,False
+12g protein per serving,1,LJ-074,24259.0,19105.0,0.79,True
+Support Bone Health,1,LJ-074,24259.0,19105.0,0.79,False
+Support muscle strength,1,LJ-074,24259.0,19105.0,0.79,False
+24 Minerals,1,LJ-074,24259.0,19105.0,0.79,False
+Made from plant protein,1,LJ-077,24114.0,14919.0,0.62,True
+No sugar,1,LJ-077,24114.0,14919.0,0.62,False
+Does not change the taste of the food,1,LJ-077,24114.0,14919.0,0.62,False
+Improvement in child's appetite and immunity,1,LJ-067,23645.0,19625.0,0.83,True
+Child stays energetic all day,1,LJ-067,23645.0,19625.0,0.83,False
+Zero added sugar / without sugar guilt-free,1,LJ-067,23645.0,19625.0,0.83,False
+No Preservatives,1,LJ-065,23117.0,34544.0,1.49,False
+Sweetened with Jaggery,1,LJ-065,23117.0,34544.0,1.49,False
+No Refined Sugar,1,LJ-065,23117.0,34544.0,1.49,False
+75% Tomato Puree,1,LJ-065,23117.0,34544.0,1.49,False
+No Onion,1,LJ-065,23117.0,34544.0,1.49,False
+No Garlic,1,LJ-065,23117.0,34544.0,1.49,False
+Unflavoured and contains no sugar,2,LJ-026; LJ-094,21575.0,19240.0,0.89,False
+Provides up to 5g protein in 2 scoops,1,LJ-066,19932.0,12917.0,0.65,True
+"Contains Ragi, Bajra, Almonds, Walnuts",1,LJ-066,19932.0,12917.0,0.65,False
+100% plant-based,1,LJ-048,19652.0,31843.0,1.62,False
+"Provides 100% RDA of vitamin B12, D3, and biotin",1,LJ-048,19652.0,31843.0,1.62,True
+"Supports energy, bone, and hair health",1,LJ-048,19652.0,31843.0,1.62,False
+Batch-specific QR code provides Eurofins third-party laboratory verification of nutritional values and purity,1,LJ-057,19099.0,26834.0,1.4,False
+"Contains ragi, bajra, dry fruits, real jaggery, and dates as stated on the label",1,LJ-057,19099.0,26834.0,1.4,False
+No misleading or incorrect labelling,1,LJ-057,19099.0,26834.0,1.4,False
+India's only children's nutrition brand providing this level of transparency,1,LJ-057,19099.0,26834.0,1.4,False
+Kids finish milk in two minutes,1,LJ-087,18390.0,28127.0,1.53,False
+"No artificial sugar, colours, or preservatives",1,LJ-087,18390.0,28127.0,1.53,False
+"2 scoops provide nutrition of ragi, bajra, almond, and walnuts",1,LJ-087,18390.0,28127.0,1.53,False
+5 grams protein,1,LJ-060,18339.0,23264.0,1.27,True
+Contains millets,1,LJ-060,18339.0,23264.0,1.27,False
+Contains dry fruits,1,LJ-060,18339.0,23264.0,1.27,False
+Enjoy iced,1,LJ-060,18339.0,23264.0,1.27,False
+Contains no whey,1,LJ-026,18093.0,16176.0,0.89,False
+"Blend of pea, brown rice, and soy",1,LJ-026,18093.0,16176.0,0.89,False
+1 scoop (15g) delivers 12g of plant protein,1,LJ-026,18093.0,16176.0,0.89,True
+Does not alter taste of rotis or batters,1,LJ-026,18093.0,16176.0,0.89,False
+Supports overall health,1,LJ-091,17882.0,23070.0,1.29,False
+"Nutrimix provides Calcium, Vitamin D, and Proteins",1,LJ-091,17882.0,23070.0,1.29,True
+Zero artificial sweetener and zero preservatives,1,LJ-091,17882.0,23070.0,1.29,False
+"Leg pain, low energy, and irritability are signs of calcium deficiency in kids",1,LJ-091,17882.0,23070.0,1.29,True
+Transparent batch-level lab testing accessible via QR code,1,LJ-042,17318.0,21925.0,1.27,False
+Gentle/light on child's stomach,1,LJ-002,16375.0,16710.0,1.02,False
+100% plant protein based,1,LJ-002,16375.0,16710.0,1.02,True
+Up to 6g protein per roti with 1 scoop added to atta dough,1,LJ-002,16375.0,16710.0,1.02,True
+Supports complete physical health,1,LJ-002,16375.0,16710.0,1.02,False
+Tastes identical to regular roti dough,1,LJ-098,16130.0,30151.0,1.87,False
+"Made with soy, pea & brown rice",1,LJ-098,16130.0,30151.0,1.87,False
+Roti puffs normally when cooked,1,LJ-098,16130.0,30151.0,1.87,False
+"Plant/food derived protein, not gym whey protein",1,LJ-088,15409.0,6935.0,0.45,True
+"Contains natural ingredients like millets, dry fruits, dates, and jaggery",1,LJ-088,15409.0,6935.0,0.45,False
+2 scoops provide 9g protein equivalent to 2 eggs or 3 cups of dal,1,LJ-088,15409.0,6935.0,0.45,True
+Provides sustained daily energy for kids,1,LJ-088,15409.0,6935.0,0.45,False
+Great protein alternative for vegetarian families,1,LJ-088,15409.0,6935.0,0.45,True
+Perfect breakfast for kids,1,LJ-079,15405.0,17349.0,1.13,False
+"Made with millets like ragi, jowar, and oats flour",1,LJ-079,15405.0,17349.0,1.13,False
+Contains Vitamin D3 & Calcium for strong bones,1,LJ-013,11856.0,14895.0,1.26,True
+"Natural ingredients including Ragi, Bajra, Badam, Walnut",1,LJ-013,11856.0,14895.0,1.26,False
+Boosts immunity with 23 vitamins and minerals,1,LJ-013,11856.0,14895.0,1.26,True
+"Naturally sweetened with Jaggery & Dates, no refined sugar",1,LJ-013,11856.0,14895.0,1.26,False
+Gentle on the stomach and will not cause stomach upset,1,LJ-034,11664.0,8306.0,0.71,False
+Plant-based protein with zero whey,1,LJ-034,11664.0,8306.0,0.71,True
+No change in taste,1,LJ-034,11664.0,8306.0,0.71,False
+Literally on third box,1,LJ-034,11664.0,8306.0,0.71,False
+"Nutrimix powder contains nutrients from ragi, bajra, almonds, and walnuts",1,LJ-082,10978.0,13033.0,1.19,False
+Helps boost kids' immunity against frequent coughs,1,LJ-082,10978.0,13033.0,1.19,True
+"Multivitamin gummies have 0 added sugar and contain Vitamins A, B, C, D, and Zinc",1,LJ-082,10978.0,13033.0,1.19,True
+Can be used in milkshakes or regular milk,1,LJ-038,9569.0,10980.0,1.15,False
+"Made out of ragi, bajra, almonds, and walnuts",1,LJ-038,9569.0,10980.0,1.15,False
+"Available in 3 flavours: Chocolate, Vanilla, Strawberry",1,LJ-038,9569.0,10980.0,1.15,False
+High in protein to start the day,1,LJ-038,9569.0,10980.0,1.15,True
+Contains no artificial sweeteners or preservatives,1,LJ-043,9198.0,8151.0,0.89,False
+"Protein sourced from skim milk powder, almonds, and walnuts",1,LJ-043,9198.0,8151.0,0.89,True
+Adds 5g of extra protein per 2 scoops,1,LJ-043,9198.0,8151.0,0.89,True
+Delicious taste ensures kids finish milk in two minutes,1,LJ-043,9198.0,8151.0,0.89,False
+Gets kids to finish milk in two minutes during summer,1,LJ-005,8594.0,16923.0,1.97,False
+10/10 on both nutrition and taste,1,LJ-005,8594.0,16923.0,1.97,False
+"Rich in nutrition from ragi, bajra, almonds, and walnuts",1,LJ-005,8594.0,16923.0,1.97,False
+Magnesium supports normal muscle tightening and relaxing,1,LJ-011,8185.0,4456.0,0.54,False
+Magnesium and vitamin D3 play a role in healthy bone maintenance,1,LJ-011,8185.0,4456.0,0.54,True
+Magnesium supports normal nerve function and nerve signals,1,LJ-011,8185.0,4456.0,0.54,False
+Naturally sweetened with dates and jaggery,1,LJ-027,8109.0,8350.0,1.03,False
+made with chicory root fibre for gut health and nutrient absorption,1,LJ-027,8109.0,8350.0,1.03,True
+Gummies contain 11+ essential vitamins and minerals,1,LJ-027,8109.0,8350.0,1.03,False
+Zero added sugar in gummies,1,LJ-027,8109.0,8350.0,1.03,False
+Supports daily nutrition and immunity during monsoon,1,LJ-027,8109.0,8350.0,1.03,True
+"Plant-based protein made with soy, pea, and brown rice isolate",1,LJ-001,7315.0,9812.0,1.34,True
+"Zero added sugar, no flavor, no color",1,LJ-001,7315.0,9812.0,1.34,False
+Contains 12g plant protein per scoop,1,LJ-001,7315.0,9812.0,1.34,True
+"Contains ragi, bajra, badam, and akhrot nutrition",1,LJ-099,6645.0,9026.0,1.36,False
+Adds 5g extra protein to milk,1,LJ-099,6645.0,9026.0,1.36,True
+"Contains vitamin A, C, and D",1,LJ-099,6645.0,9026.0,1.36,True
+Multivitamin gummy has 2.3g fiber,1,LJ-099,6645.0,9026.0,1.36,True
+Supports children's immunity and fills nutritional gaps,1,LJ-099,6645.0,9026.0,1.36,True
+12g extra protein per scoop,1,LJ-071,6550.0,13401.0,2.05,True
+No aroma change,1,LJ-071,6550.0,13401.0,2.05,False
+"Can be mixed into roti, paratha, dosa, idli, or pancakes",1,LJ-071,6550.0,13401.0,2.05,False
+No taste change in everyday foods,1,LJ-071,6550.0,13401.0,2.05,False
+Contains 12g protein per serving,1,LJ-012,5681.0,8195.0,1.44,True
+Specially made for children,1,LJ-012,5681.0,8195.0,1.44,False
+"Does not alter taste, colour, or texture of the food",1,LJ-012,5681.0,8195.0,1.44,False
+"Can be easily mixed into idli, dosa, or roti",1,LJ-012,5681.0,8195.0,1.44,False
+"Contains 3 plant-based sources: pea, brown rice, soy",1,LJ-016,5078.0,10904.0,2.15,False
+1 scoop (15g) provides 12g protein,1,LJ-016,5078.0,10904.0,2.15,True
+Unflavoured so does not change taste or texture of food,1,LJ-016,5078.0,10904.0,2.15,False
+Primary ingredient is chicory root prebiotic fiber,1,LJ-030,4831.0,10435.0,2.16,False
+"No gelatin, no added sugar, and no artificial flavours or chemicals",1,LJ-030,4831.0,10435.0,2.16,False
+Will not stick to kids' teeth and protects dental health,1,LJ-030,4831.0,10435.0,2.16,True
+Each gummy contains as much fiber as one whole banana,1,LJ-030,4831.0,10435.0,2.16,False
+Colored naturally with beetroot powder and flavoured with nature-identical strawberry flavour,1,LJ-030,4831.0,10435.0,2.16,False
+Magnesium supports efficient muscle and nerve function,1,LJ-070,4300.0,5289.0,1.23,False
+Little Joys Magnesium Gummies provide 18.7 mg of elemental magnesium per gummy,1,LJ-070,4300.0,5289.0,1.23,False
+Magnesium helps reduce tiredness and fatigue,1,LJ-070,4300.0,5289.0,1.23,False
+Contains Vitamin B6 and Vitamin D3,1,LJ-070,4300.0,5289.0,1.23,True
+"Contains ragi/millets, dry fruits, and natural sweeteners like jaggery and dates",1,LJ-072,4117.0,12350.0,3.0,False
+Formulation inspired directly by traditional Indian mothers' homemade recipes,1,LJ-072,4117.0,12350.0,3.0,False
+Zero refined sugar or artificial sweeteners,1,LJ-072,4117.0,12350.0,3.0,False
+1 scoop (15g) equals 12g of protein,1,LJ-100,4090.0,5821.0,1.42,True
+"Can be added directly to everyday meals like roti, dosa, cheela, and pancakes without altering familiar tastes",1,LJ-100,4090.0,5821.0,1.42,False
+"Made from pea, brown rice, and soy",1,LJ-100,4090.0,5821.0,1.42,False
+100% plant-based with zero whey and no sugar,1,LJ-100,4090.0,5821.0,1.42,False
+1 scoop (15g) delivers 12g plant protein,1,LJ-094,3482.0,3064.0,0.88,True
+"Easily mixes into flour, dosa batter, or chilla without altering taste",1,LJ-094,3482.0,3064.0,0.88,False
+"Plant protein blend of pea, brown rice, and soy",1,LJ-094,3482.0,3064.0,0.88,True
+Supports digestion and nutrient absorption,1,LJ-039,3101.0,4271.0,1.38,True
+Made with chicory root fiber,1,LJ-039,3101.0,4271.0,1.38,False
+Fills daily nutritional gaps and supports immunity,1,LJ-039,3101.0,4271.0,1.38,True
+"No artificial colors, flavors, or preservatives",1,LJ-039,3101.0,4271.0,1.38,False
+"Allows parents to customize sweeteners at home with honey, khand, fruit, or jaggery powder",1,LJ-049,2809.0,4267.0,1.52,False
+Nutrimix Unsweetened has no added sugar of any kind,1,LJ-049,2809.0,4267.0,1.52,False
+Contains no jaggery and no dates,1,LJ-049,2809.0,4267.0,1.52,False
+100% natural ingredients in tomato ketchup,1,LJ-054,2740.0,0.0,0.0,False
+High protein peanut butter,1,LJ-054,2740.0,0.0,0.0,True
+Jam made with real strawberries,1,LJ-054,2740.0,0.0,0.0,False
+"Chocolate spread has zero refined sugar, no palm oil, no added chemicals or preservatives",1,LJ-054,2740.0,0.0,0.0,False
+"Zero preservatives, no artificial flavor, zero MSG",1,LJ-054,2740.0,0.0,0.0,False
+Contains ragi and bajra to promote immunity in kids,1,LJ-054,2740.0,0.0,0.0,True
+"Little Joys Chocolate Hazelnut Spread contains no refined sugar, is sweetened with jaggery, and has no added palm oil",1,LJ-058,2117.0,1966.0,0.93,False
+"Little Joys Strawberry Jam contains strawberries, prebiotic plant fibre, and honey with no added refined sugar",1,LJ-058,2117.0,1966.0,0.93,False
+"2 scoops add ragi, bajra, almond, and walnut",1,LJ-083,298.0,431.0,1.45,False
+Provides 5g protein in the milk,1,LJ-083,298.0,431.0,1.45,True
+"Contains DHA, calcium, and vitamin D for kids' overall health",1,LJ-083,298.0,431.0,1.45,True

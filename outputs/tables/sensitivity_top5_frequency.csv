@@ -1,0 +1,14 @@
+creator_id,handle,rank,total,share_in_top5,label,best_backup
+CR-08,the_mum_wife_playbook,1.0,0.6829,1.0,robust,none
+CR-02,livesimply_withkripa,2.0,0.6651,1.0,robust,none
+CR-03,ekamichildcare,4.0,0.596,0.9995,robust,none
+CR-04,hello_ps8,3.0,0.6383,0.999,robust,none
+CR-16,paediatrics_decoded,5.0,0.518,0.4285,marginal,CR-19
+CR-19,instamommy_suchi,7.0,0.507,0.298,marginal,none
+CR-15,tej.lil.diary,6.0,0.5174,0.274,marginal,none
+CR-13,mumma_and_ridhu,8.0,0.4653,0.001,marginal,none
+CR-01,drgarima_mehta,9.0,0.4492,0.0,marginal,none
+CR-12,raising_zohran,10.0,0.3856,0.0,marginal,none
+CR-17,radhikabansal0908,11.0,0.3626,0.0,marginal,none
+CR-07,ohmother.in,12.0,0.3224,0.0,marginal,none
+CR-18,foodies_by_neha,13.0,0.2488,0.0,marginal,none

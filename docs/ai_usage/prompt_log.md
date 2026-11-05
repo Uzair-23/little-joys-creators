@@ -260,4 +260,41 @@ Read docs/ad_findings.md, docs/creator_profiles.md, label_map.yaml and PRD.md se
 **What I changed or rejected, and why:**
 - Fixed boolean equality assertions (`assert bool(row[col]) is False`) to handle pandas numpy boolean values cleanly.
 
+---
+
+## Phase 5 & 6: Sensitivity, Robustness, Claims Whitelist, and Creator Briefs
+**Date/time:** 2026-11-06
+**Mode / model:** Antigravity / Gemini 3.8 Flash (High)
+**Prompt:**
+```text
+Read config.yaml, docs/ad_findings.md, docs/selection_logic.md, docs/creator_profiles.md, outputs/tables/creator_ranking.csv, and PRD.md section 8.2 (sensitivity, claims, briefs). Do Phase 5 and Phase 6 together.
+
+1. src/lj/sensitivity.py runs the 5 robustness checks: 2,000 Dirichlet weight draws around base weights (dirichlet_concentration=50, seed=42), scenario variants (spend thresholds, with/without LJ-004, gate thresholds), leave-one-component-out, and evidence stress test (dropping weakest finding). Save outputs/tables/sensitivity_top5_frequency.csv, outputs/tables/sensitivity_variants.csv, and outputs/figures/top5_stability.png. Write docs/robustness.md classifying each of the top 5 picks as robust (>=80%), likely (>=50%), or marginal (<50%), with named backups.
+2. src/lj/claims.py builds outputs/tables/claims_whitelist.csv and docs/claims_whitelist.md from unique entries in ads.claims_made, listing claim text, supporting ad IDs, spend-weighted ROAS, and a needs_compliance_review flag for regulated outcomes.
+3. src/lj/briefs.py and src/lj/templates/brief.md.j2 render outputs/briefs/<creator_id>.md for each of the final 5 selected creators, with all 9 mandatory parts. Every angle, format, and hook must cite real ad IDs and real creator post URLs. Hook lines must be in the creator's dominant language and voice, with native-speaker review flags. Use only whitelisted claims. Never invent health claims or statistics.
+4. Tests: tests/test_sensitivity.py (seed reproducibility, top-5 frequency bounds), tests/test_claims.py (whitelist extraction, compliance flag), and tests/test_briefs.py (all 5 briefs exist, 9 sections present, all cited ad IDs exist in ads.csv, all cited post URLs exist in creator_posts.csv, all claims exist in whitelist).
+Run pytest, show the real output, and stop.
+```
+
+**What the AI produced:**
+- `src/lj/sensitivity.py`: Implemented 2,000 Dirichlet draws around base weights, scenario variants, leave-one-component-out, evidence stress test, outputting `outputs/tables/sensitivity_top5_frequency.csv`, `outputs/tables/sensitivity_variants.csv`, `outputs/figures/top5_stability.png`, and `docs/robustness.md`.
+- `src/lj/claims.py`: Extracted 353 unique claims from `ads.claims_made`, computed spend-weighted ROAS, assigned `needs_compliance_review` flag (136 claims flagged), and generated `outputs/tables/claims_whitelist.csv` and `docs/claims_whitelist.md`.
+- `src/lj/templates/brief.md.j2` & `src/lj/briefs.py`: Rendered 5 custom creator briefs in `outputs/briefs/` (`CR-08.md`, `CR-02.md`, `CR-04.md`, `CR-03.md`, `CR-16.md`), each containing all 9 mandatory sections, real ad IDs, real post URLs, and whitelisted claims with compliance flags.
+- `tests/test_sensitivity.py`: Tests seed reproducibility, top-5 frequency bounds, and output existence.
+- `tests/test_claims.py`: Tests whitelist extraction, compliance flag logic, and spend-weighted ROAS.
+- `tests/test_briefs.py`: Tests all 5 briefs exist, 9 sections present, all cited ad IDs exist in `ads.csv`, all cited post URLs exist in `creator_posts.csv`, all proof claims exist in `claims_whitelist.csv`.
+
+**What I checked:**
+- Verified Dirichlet draws classify CR-08 (100%), CR-02 (100%), CR-03 (99.95%), CR-04 (99.90%) as robust, and CR-16 (42.85%) as marginal, with CR-15 (or CR-19) as backup.
+- Verified all 353 claims in `claims_whitelist.csv` have supporting ad IDs and valid ROAS figures.
+- Checked that every cited ad ID (`LJ-006`, `LJ-016`, `LJ-026`, `LJ-072`, `LJ-036`, `LJ-056`, `LJ-071`, `LJ-021`, `LJ-097`, `LJ-001`, `LJ-017`, `LJ-028`) exists in `data/raw/ads.csv`.
+- Checked that every cited creator post URL exists in `data/raw/creator_posts.csv`.
+- Confirmed all 42 tests in `pytest -q` pass.
+
+**What I changed or rejected, and why:**
+- Added missing `PROCESSED_DIR` import in `src/lj/sensitivity.py`.
+- Fixed array truth value check on `claims_made` when loaded as a Python list in `src/lj/claims.py`.
+- Fixed boolean identity check in `tests/test_claims.py` by using `bool(...) is True`.
+
+
 

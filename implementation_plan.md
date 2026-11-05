@@ -405,82 +405,69 @@ pytest -q
 
 ---
 
-## Phase 5: Robustness and sensitivity (about 1 h)
+## Phase 5 & 6: Robustness, Sensitivity, Claims Whitelist, and Creator Briefs (Combined, about 2.5 h)
 
-**Goal:** show which of the 5 picks are solid and which depend on your assumptions.
+**Goal:** Stress-test the top creators across sensitivity and weight distributions, select the final 5 picks (with classified robustness and named backups), build the empirical claims whitelist from brand ads, and render 5 complete, compliant, creator-specific briefs.
 
-**Files to create:** `src/lj/sensitivity.py`, `tests/test_sensitivity.py`, `docs/robustness.md`.
+**Files to create:** `src/lj/sensitivity.py`, `src/lj/claims.py`, `src/lj/briefs.py`, `src/lj/templates/brief.md.j2`, `tests/test_sensitivity.py`, `tests/test_claims.py`, `tests/test_briefs.py`, `outputs/tables/sensitivity_top5_frequency.csv`, `outputs/tables/sensitivity_variants.csv`, `outputs/tables/claims_whitelist.csv`, `outputs/figures/top5_stability.png`, `outputs/briefs/<creator_id>.md` (five files), `docs/robustness.md`, `docs/claims_whitelist.md`.
 
+### Step A: Sensitivity & Robustness (src/lj/sensitivity.py)
 Checks to run:
-1. **Weight perturbation:** 2,000 random weight vectors (Dirichlet around your weights); record how often each creator lands in the top 5.
-2. **Threshold perturbation:** min spend (5k, 10k, 20k), with and without LJ-004, gate thresholds slightly looser and tighter.
-3. **Leave-one-component-out:** drop each score component in turn.
-4. **Evidence stress test:** rerun with the weakest finding removed.
-5. **Classify** each of the top 5 as *robust* (in the top 5 in at least 80% of runs), *likely* (at least 50%), or *marginal*, and name a backup for each marginal pick.
+1. **Weight perturbation:** 2,000 random weight vectors drawn via Dirichlet distribution around base weights (`dirichlet_concentration=50` from `config.yaml`, single seed `42`); record how often each creator lands in the top 5 (`outputs/tables/sensitivity_top5_frequency.csv`).
+2. **Threshold & scenario variants:** min spend (5k, 10k, 20k), with and without LJ-004, and gate thresholds slightly looser/tighter (`outputs/tables/sensitivity_variants.csv`).
+3. **Leave-one-component-out:** drop each score component in turn to assess dependence on individual components.
+4. **Evidence stress test:** rerun with the weakest surviving finding removed.
+5. **Classify** each of the base top 5 picks as *robust* (in top 5 in $\ge 80\%$ of Dirichlet runs), *likely* ($\ge 50\%$), or *marginal* ($< 50\%$). Name the highest-ranked non-picked creator as backup for any marginal pick.
+6. **Generate plot:** `outputs/figures/top5_stability.png` showing top-5 selection frequencies and error bands.
+7. **Write report:** `docs/robustness.md` detailing the selection stability, variant impact, and final 5 selection justification.
 
-> **Antigravity prompt (Phase 5)**
-> [Paste the standing instructions first.] Read config.yaml and docs/selection_logic.md. Do only Phase 5, following PRD.md section 8.2 (sensitivity). Implement the five checks above. Save `outputs/tables/sensitivity_top5_frequency.csv`, `outputs/tables/sensitivity_variants.csv` and `outputs/figures/top5_stability.png`. Write `docs/robustness.md` stating, for each creator in the base top 5, the percentage of runs in which they stay in the top 5, a robust / likely / marginal label, and the best backup. Test that results are identical when run twice with the same seed.
+### Step B: Claims Whitelist (src/lj/claims.py)
+1. Extract unique claims made in `ads.csv` (`claims_made`).
+2. Compute the spend-weighted ROAS and list of supporting ad IDs for each unique claim.
+3. Add `needs_compliance_review` flag: set to `True` for protein quantities, immunity, growth, brain development, or other health outcomes.
+4. Save to `outputs/tables/claims_whitelist.csv` and document in `docs/claims_whitelist.md` with ASCI/FSSAI compliance context.
+
+### Step C: Creator Briefs (src/lj/briefs.py & Jinja2 Template)
+Render `outputs/briefs/<creator_id>.md` for each of the final 5 selected creators using `src/lj/templates/brief.md.j2`. Each brief contains 9 mandatory parts:
+1. **Creator and why them:** two lines, with key empirical metrics (followers, median plays, engagement, fit).
+2. **Angle:** the single message, linked to surviving empirical findings and citing real ad IDs.
+3. **Format and language:** matched to creator's native posting habits, citing real post URLs from `creator_posts.csv`.
+4. **Three hook lines:** written in the creator's dominant language and authentic voice, citing ad IDs, flagged for native review.
+5. **Beats of the video:** structured storyboard (hook, demo, proof, call to action, child role).
+6. **Proof element:** strictly whitelisted claim from `claims_whitelist.csv` with compliance guidance.
+7. **Do and don't:** derived from `what_feels_native` and `what_would_feel_foreign` in `creators.csv`.
+8. **Risks and compliance flags:** child consent/appearance, medical-claim wording, competitor exposure, paid partnership disclosure.
+9. **Confidence & known gaps:** confidence label from Phase 4 and explicit disclosure of unknown data (e.g. inferred audience).
+
+> **Antigravity prompt (Phase 5 + 6 Combined)**
+> [Paste the standing instructions first.] Read config.yaml, docs/ad_findings.md, docs/selection_logic.md, docs/creator_profiles.md, outputs/tables/creator_ranking.csv, and PRD.md section 8.2 (sensitivity, claims, briefs). Do Phase 5 and Phase 6 together.
+> 
+> 1. `src/lj/sensitivity.py` runs the 5 robustness checks: 2,000 Dirichlet weight draws around base weights (dirichlet_concentration=50, seed=42), scenario variants (spend thresholds, with/without LJ-004, gate thresholds), leave-one-component-out, and evidence stress test (dropping weakest finding). Save `outputs/tables/sensitivity_top5_frequency.csv`, `outputs/tables/sensitivity_variants.csv`, and `outputs/figures/top5_stability.png`. Write `docs/robustness.md` classifying each of the top 5 picks as robust (>=80%), likely (>=50%), or marginal (<50%), with named backups.
+> 2. `src/lj/claims.py` builds `outputs/tables/claims_whitelist.csv` and `docs/claims_whitelist.md` from unique entries in ads.claims_made, listing claim text, supporting ad IDs, spend-weighted ROAS, and a `needs_compliance_review` flag for regulated outcomes.
+> 3. `src/lj/briefs.py` and `src/lj/templates/brief.md.j2` render `outputs/briefs/<creator_id>.md` for each of the final 5 selected creators, with all 9 mandatory parts. Every angle, format, and hook must cite real ad IDs and real creator post URLs. Hook lines must be in the creator's dominant language and voice, with native-speaker review flags. Use only whitelisted claims. Never invent health claims or statistics.
+> 4. Tests: `tests/test_sensitivity.py` (seed reproducibility, top-5 frequency bounds), `tests/test_claims.py` (whitelist extraction, compliance flag), and `tests/test_briefs.py` (all 5 briefs exist, 9 sections present, all cited ad IDs exist in ads.csv, all cited post URLs exist in creator_posts.csv, all claims exist in whitelist).
+> Run pytest, show the real output, and stop.
 
 **Run:**
 
 ```bash
 python -m lj.sensitivity
-pytest -q
-```
-
-**Verify yourself:** change the seed and confirm the robust/marginal labels stay the same. If they flip, your result is less stable than it looks, and the report must say so.
-
-**Done when:** final 5 chosen (with backups), reasoning in `docs/robustness.md`, committed.
-
----
-
-## Phase 6: What each creator should say (about 1.5 h)
-
-**Goal:** a concrete, creator-specific brief per pick, built from (a) what worked in the brand's ads and (b) what feels native to that creator. Nothing generic.
-
-**Files to create:** `src/lj/claims.py`, `src/lj/briefs.py`, `src/lj/templates/brief.md.j2`, `tests/test_claims.py`, `tests/test_briefs.py`, `outputs/briefs/<creator_id>.md` (five files), `docs/claims_whitelist.md`.
-
-### Each brief contains
-
-1. **Creator and why them:** two lines, with key numbers.
-2. **Angle:** the single message, linked to a surviving finding and ad IDs.
-3. **Format and language:** matched to the creator's habits, with evidence from their own posts (post URLs).
-4. **Three hook lines** in the creator's own language and voice, in the style of the winning hooks (cite the ad IDs).
-5. **Beats of the video:** hook, demo, proof, call to action, and the child's role if relevant.
-6. **Proof element:** only a whitelisted claim.
-7. **Do and don't:** from `what_feels_native` and `what_would_feel_foreign`.
-8. **Risks and compliance flags:** child consent and appearance, medical-claim wording, competitor exposure, paid-partnership disclosure.
-9. **Confidence** from Phase 5, and what we do not know about this creator.
-
-### Claims whitelist
-
-`claims.py` builds the whitelist from the unique entries in `ads.claims_made` (with the ads that use each claim and their spend-weighted ROAS). Flag claims needing human compliance review (protein quantities, immunity, growth, brain development, any health outcome). Advertising children's nutrition is regulated, so recommend the brand verify wording against applicable ASCI and FSSAI guidance. You are not giving legal advice; say so.
-
-> **Antigravity prompt (Phase 6)**
-> [Paste the standing instructions first.] Read docs/ad_findings.md, docs/robustness.md, data/processed/creator_features.csv, and the `what_feels_native`, `what_would_feel_foreign`, `catchphrases`, `voice` and `language_use` fields in creators.csv. Do only Phase 6.
-> 1. `src/lj/claims.py` builds `outputs/tables/claims_whitelist.csv` and `docs/claims_whitelist.md` from the unique entries in ads.claims_made, with the ad IDs that use each claim and a `needs_compliance_review` flag.
-> 2. `src/lj/briefs.py` renders `outputs/briefs/<creator_id>.md` for each of the final 5, following the 9-part structure in implementation_plan.md Phase 6. Every angle, format and hook style must cite the ad IDs and creator post URLs it comes from. Hook lines must be in the creator's own language and voice, and flagged for native-speaker review if needed. Use only whitelisted claims. Do not invent statistics.
-> 3. Tests that fail if a brief contains a claim not in the whitelist, or cites an ad ID or post URL that does not exist.
-> Show me the first brief for review before writing the rest.
-
-**Run:**
-
-```bash
 python -m lj.claims
 python -m lj.briefs
 pytest -q
 ```
 
 **Verify yourself:**
-- Read each brief as if you were the creator. Would it sound like them? Compare with their real captions and transcripts.
-- Check every cited ad ID and post URL exists and says what the brief claims.
-- If a hook is in a language you do not read well, say so in your note and flag it for the brand to review.
+- Check that seed 42 produces identical top-5 stability frequencies when run twice.
+- Read each brief as if you were the creator; verify it captures their authentic tone and avoids what feels foreign.
+- Verify that every cited ad ID and post URL exists in `data/raw/`.
+- Confirm no brief makes an unwhitelisted health claim for children.
 
-**Done when:** five briefs exist, tests pass, committed.
+**Done when:** Final 5 chosen with sensitivity backing in `docs/robustness.md`, `claims_whitelist.csv` built, 5 complete briefs rendered in `outputs/briefs/`, all tests pass, committed.
 
 ---
 
-## Phase 7: The answer for the marketing manager (about 1.5 h)
+## Phase 7: The answer for the marketing manager
 
 **Goal:** a document a marketing manager can read in five minutes, act on, and trust.
 
