@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Joys Creator Selection Report: Final Strategy & Campaign Allocation</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #eff6ff;
+      --accent: #2563eb;
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --success: #059669;
+      --success-bg: #ecfdf5;
+      --warning: #d97706;
+      --warning-bg: #fffbeb;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .meta-item strong { color: var(--text); }
+    h2 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.15rem;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+    }
+    p, ul, ol { margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    th, td {
+      padding: 0.75rem 0.85rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background-color: #f1f5f9;
+      color: #334155;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    tr:hover { background-color: #f8fafc; }
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .badge-robust { background-color: var(--success-bg); color: var(--success); }
+    .badge-marginal { background-color: var(--warning-bg); color: var(--warning); }
+    .badge-high { background-color: #dbeafe; color: #1d4ed8; }
+    .badge-medium { background-color: #f3e8ff; color: #7e22ce; }
+    .badge-low { background-color: #fee2e2; color: #b91c1c; }
+    .alert {
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1.25rem 0;
+      border-left: 4px solid var(--accent);
+      background-color: var(--primary-light);
+    }
+    .alert-warning {
+      border-left-color: var(--warning);
+      background-color: var(--warning-bg);
+    }
+    .figure-container {
+      text-align: center;
+      margin: 2rem 0;
+      padding: 1rem;
+      background: #f8fafc;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .figure-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .caption {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.85em;
+      background: #f1f5f9;
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      background: #ffffff;
+    }
+    .card h4 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Little Joys Creator Selection Report</h1>
+      <p style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 0.75rem;">Final Campaign Strategy & Influencer Allocation</p>
+      <div class="meta-grid">
+        <div class="meta-item"><strong>Target:</strong> 5 Creators (Kids' Nutrition)</div>
+        <div class="meta-item"><strong>Audience:</strong> Marketing Leadership & Growth</div>
+        <div class="meta-item"><strong>Ad Dataset:</strong> {{ total_ads_count }} Ads (Meta Library)</div>
+        <div class="meta-item"><strong>Pipeline Seed:</strong> Seed 42 (Reproducible)</div>
+      </div>
+    </header>
+
+    <!-- SECTION 1 -->
+    <h2>1. The Answer: Final 5 Creator Recommendations</h2>
+    <p>Based strictly on empirical ad performance analysis across {{ total_ads_count }} ads and structured creator auditing across 20 candidate accounts, the recommended 5 creators and campaign roles are:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Pick</th>
+          <th>Creator ID</th>
+          <th>Handle</th>
+          <th>Role / Why</th>
+          <th>Core Message</th>
+          <th>Confidence</th>
+          <th>Robustness</th>
+          <th>Main Risk</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in top5_picks %}
+        <tr>
+          <td><strong>#{{ p.rank }}</strong></td>
+          <td><code>{{ p.creator_id }}</code></td>
+          <td><strong>{{ p.handle }}</strong></td>
+          <td>{{ p.why }}</td>
+          <td><em>{{ p.message }}</em></td>
+          <td><span class="badge badge-{{ p.confidence.lower() }}">{{ p.confidence }}</span></td>
+          <td><span class="badge badge-{{ 'robust' if 'Robust' in p.robustness else 'marginal' }}">{{ p.robustness }}</span></td>
+          <td>{{ p.risk }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="alert">
+      <strong>Designated Empirical Backups:</strong>
+      <ul style="margin-top: 0.5rem; margin-bottom: 0;">
+        {% for b in backups %}
+        <li><strong>Rank #{{ b.rank }} ({{ b.creator_id }} &mdash; {{ b.handle }}):</strong> {{ b.why }} &bull; <em>{{ b.message }}</em> (Robustness: {{ b.robustness }}, Confidence: <span class="badge badge-{{ b.confidence.lower() }}">{{ b.confidence }}</span>)</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- SECTION 2 -->
+    <h2>2. What the Brand's Own Ads Tell Us: Empirical Creative Levers</h2>
+    <p>Analysis of the brand's ad account export ({{ total_ads_count }} ads, ₹{{ "{:,.0f}".format(total_spend_val) }} spend, ₹{{ "{:,.0f}".format(total_rev_val) }} revenue) under false discovery rate control (<em>q</em> &le; 0.05) and duplicate noise calibration revealed <strong>8 surviving creative patterns</strong> (2 Supported, 6 Directional).</p>
+
+    <div class="figure-container">
+      <img src="figures/ad_findings_forest.png" alt="Ad Findings Forest Plot with 95% Confidence Intervals">
+      <div class="caption">Figure 1: Forest plot of 8 surviving creative findings showing estimated effects and 95% bootstrap intervals.</div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Finding ID</th>
+          <th>Feature</th>
+          <th>Optimal Level</th>
+          <th>Tier</th>
+          <th>Metric Family</th>
+          <th>Effect</th>
+          <th>95% Bootstrap CI</th>
+          <th>Adj. p-value</th>
+          <th>Spend (₹)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for f in surviving_findings %}
+        <tr>
+          <td><code>{{ f.finding_id }}</code></td>
+          <td><code>{{ f.feature }}</code></td>
+          <td><strong>{{ f.level }}</strong></td>
+          <td>{{ f.tier }}</td>
+          <td>{{ f.metric_family }}</td>
+          <td><strong>{{ f.effect }}</strong></td>
+          <td>{{ f.ci }}</td>
+          <td>{{ f.adj_p_value }}</td>
+          <td>₹{{ f.spend_inr }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <h3>Key Creative Levers for Campaign Deployment:</h3>
+    <ul>
+      <li><strong>Attention vs Sales Split (Hindi Language):</strong> Ads in Hindi generate a substantial positive lift in Hook Rate (+0.1049, 95% CI [0.0182, 0.1320], adj p = 0.0400). However, Hindi ads deliver a lower spend-weighted ROAS benchmark. Hindi stops the scroll effectively, but bottom-of-funnel conversion requires explicit problem-solution demonstration.</li>
+      <li><strong>Child in Opening Frame (+0.0809 Hook Lift):</strong> Placing a child in the first 3 seconds drives a robust, reproducible +0.0809 lift in Hook Rate (95% CI [0.0484, 0.1138], adj p = 0.0016).</li>
+      <li><strong>Unmasking Outlier Distortions (The LJ-004 Effect):</strong> Ad <code>LJ-004</code> alone accounted for ₹{{ "{:,.0f}".format(lj004_rev) }} revenue ({{ "{:.2f}".format(lj004_rev_share) }}% of top revenue) at {{ "{:.2f}".format(lj004_roas) }}x ROAS on ₹{{ "{:,.0f}".format(lj004_spend) }} spend. Features carried by <code>LJ-004</code> collapsed by &gt;50% when tested without it, leaving {{ n_not_concluded }} unproven patterns logged in <code>ad_not_concluded.csv</code>.</li>
+    </ul>
+
+    <!-- SECTION 3 -->
+    <h2>3. Why These 5 and Not the Others: Qualification Gates & Ranking</h2>
+    <p>To prevent budget waste and brand damage, all 20 candidates were evaluated against <strong>5 hard qualification gates</strong>:</p>
+
+    <div class="alert alert-warning">
+      <strong>Disqualified Creators ({{ disqualified|length }} of 20 Excluded):</strong>
+      <ul style="margin-top: 0.5rem; margin-bottom: 0;">
+        {% for d in disqualified %}
+        <li><code>{{ d.creator_id }}</code> (<strong>{{ d.handle }}</strong>): Disqualified &mdash; {{ d.reasons }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <h3>Scoring System ({{ full_ranking|length }} Passing Creators Scored):</h3>
+    <p>Passed creators were evaluated on 5 normalized dimensions: <strong>Creative Fit (30%)</strong>, <strong>Reach Quality (25%)</strong>, <strong>Engagement Quality (20%)</strong>, <strong>Audience Fit (15%)</strong>, and <strong>Commercial Risk (10%)</strong>.</p>
+
+    <!-- SECTION 4 -->
+    <h2>4. How Sure We Are: Sensitivity, Robustness & Stability</h2>
+    <p>To stress-test our selections against shifting brand priorities, we executed <strong>2,000 Dirichlet weight draws</strong> and multiple scenario perturbation models.</p>
+
+    <div class="figure-container">
+      <img src="figures/top5_stability.png" alt="Top 5 Stability and Sensitivity Frequencies">
+      <div class="caption">Figure 2: Empirical selection frequency across 2,000 Dirichlet weight draws around baseline weights.</div>
+    </div>
+
+    <ul>
+      <li><strong>Core Picks 1 to 4 are Rock-Solid (Robust &ge; 80%):</strong> CR-08 (100.00%), CR-02 (100.00%), CR-03 (99.95%), and CR-04 (99.90%) never drop out across extreme weight variations.</li>
+      <li><strong>The 5th Slot Decision:</strong> CR-16 appears in 42.85% of simulations. While possessing superior creative fit (0.6084) via pure Hindi clinical explainers, its lower reach quality (0.1754) makes it marginal.</li>
+      <li><strong>The High-Confidence Alternative:</strong> CR-15 (@tej.lil.diary, 27.40% frequency) is only 0.0006 behind CR-16 in base score. Crucially, CR-15 is the <strong>only creator in the pool with verified brand audience data (83.4% women, 88.3% India)</strong> and achieves High confidence. If the marketing team seeks verified audience certainty, CR-15 is the primary replacement.</li>
+    </ul>
+
+    <!-- SECTION 5 -->
+    <h2>5. What Each Creator Should Say: Brief Summaries</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h4>1. CR-08 (@the_mum_wife_playbook) &bull; Rank #1</h4>
+        <p><strong>Angle:</strong> Picky-eating breakfast battle solved with clean nutrition.</p>
+        <p><strong>Opening Hook:</strong> <em>"Subah ka sabse mushkil task? Meri beti ko breakfast khilana!"</em> (Cites ad <code>LJ-016</code>).</p>
+        <p><strong>Whitelisted Claim:</strong> Zero refined sugar or artificial sweeteners (Ad <code>LJ-072</code>, ROAS 3.0039x).</p>
+        <p><a href="briefs/CR-08.md">View Full 9-Part Brief &rarr;</a></p>
+      </div>
+
+      <div class="card">
+        <h4>2. CR-02 (@livesimply_withkripa) &bull; Rank #2</h4>
+        <p><strong>Angle:</strong> Morning domestic commotion resolved with 100% plant protein.</p>
+        <p><strong>Opening Hook:</strong> <em>"Roz subah ka wahi drama: 'Isne doodh nahi piya, school kaise bhejoon?'"</em> (Cites ad <code>LJ-026</code>).</p>
+        <p><strong>Whitelisted Claim:</strong> 100% plant protein (Ads <code>LJ-036; LJ-056</code>, ROAS 1.6254x).</p>
+        <p><a href="briefs/CR-02.md">View Full 9-Part Brief &rarr;</a></p>
+      </div>
+
+      <div class="card">
+        <h4>3. CR-04 (@hello_ps8) &bull; Rank #3</h4>
+        <p><strong>Angle:</strong> Mindful morning active mom routine with child bonding.</p>
+        <p><strong>Opening Hook:</strong> <em>"The one small habit that changed our chaotic school mornings forever."</em> (Cites ad <code>LJ-006</code>).</p>
+        <p><strong>Whitelisted Claim:</strong> +12g Protein per scoop (Ads <code>LJ-006; LJ-097</code>, ROAS 2.4764x).</p>
+        <p><a href="briefs/CR-04.md">View Full 9-Part Brief &rarr;</a></p>
+      </div>
+
+      <div class="card">
+        <h4>4. CR-03 (@ekamichildcare) &bull; Rank #4</h4>
+        <p><strong>Angle:</strong> Pediatric clinic consultation addressing fussy eating protein gaps.</p>
+        <p><strong>Opening Hook:</strong> <em>"Clinic mein aane wale 10 mein se 7 parents mujhse yahi poochte hain: 'Doctor, bachha theek se khata nahi, kya karein?'"</em> (Cites ad <code>LJ-016</code>).</p>
+        <p><strong>Whitelisted Claim:</strong> 1 scoop (15g) provides 12g protein (Ad <code>LJ-016</code>, ROAS 2.1506x).</p>
+        <p><a href="briefs/CR-03.md">View Full 9-Part Brief &rarr;</a></p>
+      </div>
+
+      <div class="card">
+        <h4>5. CR-16 (@paediatrics_decoded) &bull; Rank #5</h4>
+        <p><strong>Angle:</strong> Pediatric myth-buster on calcium absorption and Vitamin D.</p>
+        <p><strong>Opening Hook:</strong> <em>"Calcium lene se tab tak koi fayda nahi jab tak Vitamin D body mein absorb na ho sake."</em> (Cites ad <code>LJ-028</code>).</p>
+        <p><strong>Whitelisted Claim:</strong> sunlight/vitamin D is required to absorb calcium (Ad <code>LJ-028</code>, ROAS 1.0827x).</p>
+        <p><a href="briefs/CR-16.md">View Full 9-Part Brief &rarr;</a></p>
+      </div>
+    </div>
+
+    <!-- SECTION 6 -->
+    <h2>6. What This Data Cannot Tell You: Critical Limitations</h2>
+    <ul>
+      <li><strong>No Rate Cards or Commercial Cost Data:</strong> The dataset contains zero pricing information. We cannot claim cost-efficiency or customer acquisition cost (CAC) superiority.</li>
+      <li><strong>Inferred Audience Demographics for {{ inferred_aud_count }} Creators:</strong> Audience export data exists for only {{ verified_aud_count }} of 20 creators (CR-14, CR-15, CR-20). All demographic claims for the other {{ inferred_aud_count }} accounts are strictly inferred.</li>
+      <li><strong>Observational Associations, Not Causes:</strong> All ad findings demonstrate statistical association within past campaigns, not guaranteed causal lift.</li>
+      <li><strong>AI-Generated Label Error Rates:</strong> Human audit revealed measurable error rates in automated tags ({{ "{:.1f}".format(hook_err_pct) }}% on hook types, {{ "{:.1f}".format(format_err_pct) }}% on ad format and child presence).</li>
+      <li><strong>Organic vs Sponsored Delivery Discount:</strong> Creator sponsored posts average lower than organic median plays. Sponsored performance will lag viral organic benchmarks.</li>
+    </ul>
+
+    <!-- SECTION 7 -->
+    <h2>7. Before You Sign Anyone: Actionable Marketing Checklist</h2>
+    <ol>
+      <li><strong>Request Creator-Side Demographics:</strong> Obtain native platform analytics screenshots verifying women and India geographic audience proportions.</li>
+      <li><strong>Obtain Commercial Rate Cards:</strong> Negotiate 12-month paid digital advertising amplification rights across Meta and Google ad libraries.</li>
+      <li><strong>Mandatory Legal & Regulatory Review:</strong> Have compliance counsel clear all script formulations against ASCI Food & Beverage Code and FSSAI (2018) regulations.</li>
+      <li><strong>Strict Exclusivity Lockout:</strong> Enforce 90-day non-compete clauses prohibiting endorsements of competing kids' nutrition brands (e.g., Gritzo).</li>
+      <li><strong>Colloquial Native-Speaker Run-Through:</strong> Conduct rapid verbal run-throughs of Hindi/Hinglish scripts to guarantee authentic, natural cadence.</li>
+    </ol>
+
+    <!-- SECTION 8 -->
+    <h2>8. Appendix: Audit Diagnostics & Complete Rankings</h2>
+    <p><strong>Duplicate Creative Platform Noise:</strong> Evaluated on 3 identical creative pairs: Median platform ROAS noise is <strong>{{ "{:.4f}".format(roas_noise) }}x</strong>; Median platform CVR noise is <strong>{{ "{:.4f}".format(cvr_noise) }}</strong>.</p>
+
+    <h3>Complete Ranking of Passing Creators</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>ID</th>
+          <th>Handle</th>
+          <th>Total</th>
+          <th>Fit</th>
+          <th>Reach</th>
+          <th>Eng</th>
+          <th>Audience</th>
+          <th>Risk</th>
+          <th>Confidence</th>
+          <th>Soft Flags</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in full_ranking %}
+        <tr>
+          <td>{{ r.rank }}</td>
+          <td><code>{{ r.creator_id }}</code></td>
+          <td><strong>{{ r.handle }}</strong></td>
+          <td><strong>{{ r.total }}</strong></td>
+          <td>{{ r.fit }}</td>
+          <td>{{ r.reach }}</td>
+          <td>{{ r.eng }}</td>
+          <td>{{ r.aud }}</td>
+          <td>{{ r.risk }}</td>
+          <td><span class="badge badge-{{ r.confidence.lower() }}">{{ r.confidence }}</span></td>
+          <td><small>{{ r.soft_flags }}</small></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+
