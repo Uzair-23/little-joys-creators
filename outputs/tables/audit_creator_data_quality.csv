@@ -1,0 +1,21 @@
+creator_id,handle,posts_available,posts_in_file_profile,future_posts_after_as_of,hidden_likes_count,hidden_likes_share,sponsored_posts_count,sponsored_share,transcripts_available,last_post_date,inactive_days,flags
+CR-01,drgarima_mehta,20,20,0,0,0.0,2,0.1,5,2026-09-21,35,
+CR-02,livesimply_withkripa,20,20,0,1,0.05,0,0.0,6,2026-10-11,15,
+CR-03,ekamichildcare,20,20,0,0,0.0,2,0.1,6,2026-09-21,35,
+CR-04,hello_ps8,20,20,0,0,0.0,2,0.1,6,2026-10-12,14,
+CR-05,sia_3vedi,20,20,0,0,0.0,1,0.05,6,2026-10-11,15,
+CR-06,thatkushalmistry,20,20,0,0,0.0,1,0.05,6,2026-09-28,28,
+CR-07,ohmother.in,20,20,0,0,0.0,4,0.2,5,2026-10-12,14,
+CR-08,the_mum_wife_playbook,20,20,0,0,0.0,4,0.2,6,2026-10-12,14,
+CR-09,doc_mama_and_babies,20,20,0,3,0.15,16,0.8,5,2026-09-08,48,sponsored_saturation_80%; inactive_48d
+CR-10,couple_adishiv,20,20,0,0,0.0,7,0.35,6,2026-10-12,14,
+CR-11,raja_choudhary04,20,20,0,0,0.0,7,0.35,6,2026-10-07,19,
+CR-12,raising_zohran,20,20,0,0,0.0,3,0.15,4,2026-09-20,36,
+CR-13,mumma_and_ridhu,20,20,0,0,0.0,12,0.6,6,2026-09-21,35,
+CR-14,parentingtips_surat,20,20,0,0,0.0,0,0.0,6,2026-10-12,14,
+CR-15,tej.lil.diary,20,20,0,0,0.0,6,0.3,6,2026-09-26,30,
+CR-16,paediatrics_decoded,20,20,0,0,0.0,0,0.0,6,2026-10-06,20,
+CR-17,radhikabansal0908,20,20,0,6,0.3,20,1.0,6,2026-10-13,13,hidden_likes_30%; sponsored_saturation_100%
+CR-18,foodies_by_neha,12,12,1,0,0.0,1,0.0833,5,2026-10-27,-1,future_posts_1
+CR-19,instamommy_suchi,20,20,0,0,0.0,15,0.75,6,2026-10-12,14,sponsored_saturation_75%
+CR-20,storiesbyvihaa,20,20,0,0,0.0,2,0.1,5,2026-10-07,19,

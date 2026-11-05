@@ -1,0 +1,3 @@
+difference_days,ad_count,pct_share,is_flagged,interpretation,sample_ad_ids
+0,26,26.0,False,Exact match: days_live equals calendar duration (inclusive boundary),LJ-010; LJ-013; LJ-015; LJ-020; LJ-021
+-1,74,74.0,False,One-day convention: days_live equals calendar duration minus 1 (exclusive boundary),LJ-001; LJ-002; LJ-003; LJ-004; LJ-005

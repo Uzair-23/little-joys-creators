@@ -1,0 +1,21 @@
+creator_id,handle,audience_known,platform,women_pct,men_pct,india_share_pct,outside_india_pct,past_brands,flags
+CR-01,drgarima_mehta,False,unknown,,,,,,audience_inferred
+CR-02,livesimply_withkripa,False,unknown,,,,,,audience_inferred
+CR-03,ekamichildcare,False,unknown,,,,,,audience_inferred
+CR-04,hello_ps8,False,unknown,,,,,,audience_inferred
+CR-05,sia_3vedi,False,unknown,,,,,,audience_inferred
+CR-06,thatkushalmistry,False,unknown,,,,,,audience_inferred
+CR-07,ohmother.in,False,unknown,,,,,,audience_inferred
+CR-08,the_mum_wife_playbook,False,unknown,,,,,,audience_inferred
+CR-09,doc_mama_and_babies,False,unknown,,,,,,audience_inferred
+CR-10,couple_adishiv,False,unknown,,,,,,audience_inferred
+CR-11,raja_choudhary04,False,unknown,,,,,,audience_inferred
+CR-12,raising_zohran,False,unknown,,,,,,audience_inferred
+CR-13,mumma_and_ridhu,False,unknown,,,,,,audience_inferred
+CR-14,parentingtips_surat,True,facebook,65.0,35.0,64.4,35.599999999999994,,low_india_share_64.4%; foreign_platform_facebook
+CR-15,tej.lil.diary,True,instagram,83.4,16.6,88.3,11.700000000000003,Himalaya Babycare; cocoon care®,
+CR-16,paediatrics_decoded,False,unknown,,,,,,audience_inferred
+CR-17,radhikabansal0908,False,unknown,,,,,,audience_inferred
+CR-18,foodies_by_neha,False,unknown,,,,,,audience_inferred
+CR-19,instamommy_suchi,False,unknown,,,,,,audience_inferred
+CR-20,storiesbyvihaa,True,instagram,29.9,70.1,95.7,4.299999999999997,Little Joys,low_women_share_29.9%; past_little_joys_partner

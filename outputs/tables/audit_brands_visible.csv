@@ -1,0 +1,204 @@
+creator_id,brand,category,is_known_in_config
+CR-01,Alkem,uncategorised,False
+CR-01,Calpol,uncategorised,False
+CR-01,Carepure,uncategorised,False
+CR-01,Chupa Chups,adjacent_food_snacks,True
+CR-01,Cipla,uncategorised,False
+CR-01,Dr. Reddy's,uncategorised,False
+CR-01,Ibugesic Plus,uncategorised,False
+CR-01,LifeCell,uncategorised,False
+CR-01,Meftal,uncategorised,False
+CR-01,Woodwards,uncategorised,False
+CR-02,Cadbury,adjacent_food_snacks,True
+CR-02,Diet Coke,uncategorised,False
+CR-02,Happilo,uncategorised,False
+CR-02,Qatar Airways,uncategorised,False
+CR-02,Reliance,uncategorised,False
+CR-02,Safari,uncategorised,False
+CR-02,Voltas,uncategorised,False
+CR-03,Areoveda,uncategorised,False
+CR-03,Calvin Klein,uncategorised,False
+CR-03,Lacoste,uncategorised,False
+CR-03,Little Tummys,uncategorised,False
+CR-03,Troovy,uncategorised,False
+CR-04,Bajaj Finance,uncategorised,False
+CR-04,Cult,uncategorised,False
+CR-04,Mahindra,uncategorised,False
+CR-04,Prada,uncategorised,False
+CR-05,Disney,uncategorised,False
+CR-05,Frozen,uncategorised,False
+CR-05,Gritzo,competitor_kids_nutrition,True
+CR-05,HP,uncategorised,False
+CR-05,Hollyland,uncategorised,False
+CR-05,Keekee,uncategorised,False
+CR-05,booba_babydoll,uncategorised,False
+CR-06,Apple,uncategorised,False
+CR-06,Balenciaga,uncategorised,False
+CR-06,Hombale Films,uncategorised,False
+CR-06,Kantara,uncategorised,False
+CR-06,Samsung,uncategorised,False
+CR-06,YouTube,uncategorised,False
+CR-07,Amazon,uncategorised,False
+CR-07,American Express,uncategorised,False
+CR-07,Barosi,uncategorised,False
+CR-07,Bellerose,uncategorised,False
+CR-07,Doms,uncategorised,False
+CR-07,Hello Kitty,uncategorised,False
+CR-07,Maggi,uncategorised,False
+CR-07,Marriott,uncategorised,False
+CR-07,Qubo,uncategorised,False
+CR-07,Skergo,uncategorised,False
+CR-07,Yum,uncategorised,False
+CR-07,one.science.nutrition.in,uncategorised,False
+CR-07,undertone_official,uncategorised,False
+CR-08,Bunkers,uncategorised,False
+CR-08,Epigamia,uncategorised,False
+CR-08,Lyfcare,uncategorised,False
+CR-08,Moschino,uncategorised,False
+CR-08,Posh Affaires,uncategorised,False
+CR-08,Shopsy,uncategorised,False
+CR-08,WonderBuddy,uncategorised,False
+CR-09,Bharat Biotech,uncategorised,False
+CR-09,EkStep,uncategorised,False
+CR-09,Firstcry,uncategorised,False
+CR-09,FirstcryIndia,uncategorised,False
+CR-09,Good Monk,uncategorised,False
+CR-09,HP Gas,uncategorised,False
+CR-09,HPCL,uncategorised,False
+CR-09,John Jacobs,uncategorised,False
+CR-09,Kesh King,uncategorised,False
+CR-09,Lenskart,uncategorised,False
+CR-09,Little joys,uncategorised,False
+CR-09,Manna,uncategorised,False
+CR-09,NDTV,uncategorised,False
+CR-09,Nisarga Herbs,uncategorised,False
+CR-09,Sorozema,uncategorised,False
+CR-09,Swiggy Instamart,uncategorised,False
+CR-09,Treat Resort Silvassa,uncategorised,False
+CR-09,firstcryindia,uncategorised,False
+CR-09,maxfashionindia,uncategorised,False
+CR-10,Cipladine,uncategorised,False
+CR-10,Dressberry,uncategorised,False
+CR-10,Firstcry Parenting,uncategorised,False
+CR-10,Gritzo,competitor_kids_nutrition,True
+CR-10,Joyo,uncategorised,False
+CR-10,Myntra,uncategorised,False
+CR-10,Pampers,uncategorised,False
+CR-10,Priority,uncategorised,False
+CR-10,Tedibar,uncategorised,False
+CR-10,Triveni Almirah,uncategorised,False
+CR-10,facescanada,uncategorised,False
+CR-10,flipkart,uncategorised,False
+CR-10,krsd_group,uncategorised,False
+CR-11,D.Mart,uncategorised,False
+CR-11,Domino's,uncategorised,False
+CR-11,Gritzo,competitor_kids_nutrition,True
+CR-11,LuvLap,uncategorised,False
+CR-11,Marvel,uncategorised,False
+CR-11,Puma,uncategorised,False
+CR-11,SKY,uncategorised,False
+CR-11,Spider-Man,uncategorised,False
+CR-11,StayVista,uncategorised,False
+CR-11,Tata,uncategorised,False
+CR-11,Troovy Foods,uncategorised,False
+CR-11,hopupchandigarh,uncategorised,False
+CR-11,hopupindia,uncategorised,False
+CR-11,mamaearth,uncategorised,False
+CR-12,Good Knight,uncategorised,False
+CR-12,KleeNest,uncategorised,False
+CR-12,Klenzmo,uncategorised,False
+CR-12,Nivea,uncategorised,False
+CR-12,tidysleepofficial,uncategorised,False
+CR-13,Akshar Travels,uncategorised,False
+CR-13,Aretto,uncategorised,False
+CR-13,Ariel,uncategorised,False
+CR-13,Bare Anatomy,uncategorised,False
+CR-13,Haier,uncategorised,False
+CR-13,Johnson's Baby,uncategorised,False
+CR-13,Mankind,uncategorised,False
+CR-13,Maruti Suzuki,uncategorised,False
+CR-13,NESTA TOYS,uncategorised,False
+CR-13,Nataraj,uncategorised,False
+CR-13,Netflix,uncategorised,False
+CR-13,Ova News,uncategorised,False
+CR-13,Poojara,uncategorised,False
+CR-13,Prega News,uncategorised,False
+CR-13,Vanish,uncategorised,False
+CR-14,TRUFROST,uncategorised,False
+CR-14,Trufrost,uncategorised,False
+CR-14,suratkids,uncategorised,False
+CR-15,Adidas,uncategorised,False
+CR-15,Amazon,uncategorised,False
+CR-15,Attero,uncategorised,False
+CR-15,Crocs,uncategorised,False
+CR-15,Gap,uncategorised,False
+CR-15,Hey Laundry,uncategorised,False
+CR-15,New Balance,uncategorised,False
+CR-15,Onyc,uncategorised,False
+CR-15,Orelle The School,uncategorised,False
+CR-15,Pampers,uncategorised,False
+CR-15,SUPR,uncategorised,False
+CR-15,Shivan shishu aahar,uncategorised,False
+CR-15,Skechers,uncategorised,False
+CR-15,Starbucks,uncategorised,False
+CR-15,Swarna Kanchi,uncategorised,False
+CR-15,Zepto,uncategorised,False
+CR-15,kidipoo,uncategorised,False
+CR-15,lafesta.hyd,uncategorised,False
+CR-15,reel_matic,uncategorised,False
+CR-16,Dabur,uncategorised,False
+CR-17,Be Clinical,uncategorised,False
+CR-17,BeginBird,uncategorised,False
+CR-17,Chicco,uncategorised,False
+CR-17,Dermicool,uncategorised,False
+CR-17,Disney,uncategorised,False
+CR-17,Doodle Dock,uncategorised,False
+CR-17,Dyson,uncategorised,False
+CR-17,FCL,uncategorised,False
+CR-17,Fixderma,uncategorised,False
+CR-17,Flipkart,uncategorised,False
+CR-17,Himalaya,adjacent_wellness,True
+CR-17,Mamaearth,uncategorised,False
+CR-17,Mylo,uncategorised,False
+CR-17,Mylo Care,uncategorised,False
+CR-17,Nandi,uncategorised,False
+CR-17,Netflix,uncategorised,False
+CR-17,Pintola,uncategorised,False
+CR-17,Princess by RENÉE,uncategorised,False
+CR-17,REDMI,uncategorised,False
+CR-17,RENÉE,uncategorised,False
+CR-17,Redmi,uncategorised,False
+CR-17,Xiaomi,uncategorised,False
+CR-17,beyond,uncategorised,False
+CR-17,imagimake,uncategorised,False
+CR-18,Adya,uncategorised,False
+CR-18,Elica,uncategorised,False
+CR-18,Orchid Hotel Pune,uncategorised,False
+CR-18,Palmonas,uncategorised,False
+CR-18,Suhana,uncategorised,False
+CR-18,Woman TV,uncategorised,False
+CR-18,safsafaiwala.com,uncategorised,False
+CR-19,Anveshan,uncategorised,False
+CR-19,Bournvita,uncategorised,False
+CR-19,Complan,uncategorised,False
+CR-19,DPIIT,uncategorised,False
+CR-19,FCL,uncategorised,False
+CR-19,Indira IVF,uncategorised,False
+CR-19,Kesh King,uncategorised,False
+CR-19,Little Angel,uncategorised,False
+CR-19,Nova IVF Fertility,uncategorised,False
+CR-19,PAN Health,uncategorised,False
+CR-19,Prestige,uncategorised,False
+CR-19,Princess by Renee,uncategorised,False
+CR-19,R for Rabbit,uncategorised,False
+CR-19,Rajdhani,uncategorised,False
+CR-19,Startup India,uncategorised,False
+CR-19,TCL,uncategorised,False
+CR-19,Treo,uncategorised,False
+CR-19,VAHDAM,uncategorised,False
+CR-20,Suzuki,uncategorised,False
+CR-20,aadvika_collections07,uncategorised,False
+CR-20,divya_bridal_makeupartist,uncategorised,False
+CR-20,lotsoflovestories,uncategorised,False
+CR-20,sowmyz_couture,uncategorised,False
+CR-20,sreeniaccessories,uncategorised,False
